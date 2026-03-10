@@ -37,6 +37,12 @@
             "group": ""
         },
         {
+            "guid": "88725342277f50e4587895acc7b7ee7c",
+            "prefix": "Scripts",
+            "path": "YuinaTalk",
+            "group": ""
+        },
+        {
             "guid": "7bf06fa813bb9c34daf521998fa72ab1",
             "prefix": "Spawn",
             "path": "Animate",
@@ -131,6 +137,12 @@
             "prefix": "TextPrinters",
             "path": "Wide",
             "group": "TextPrinters/be917cf4-5ff0-426d-9f87-c64d52aaaee7"
+        },
+        {
+            "guid": "193a7a6ada29ae649bd3db8f1e51bbd7",
+            "prefix": "TextPrinters",
+            "path": "YuinaPrinter",
+            "group": "TextPrinters/c6ef2851-e567-4cac-b78f-5c681b63b7a7"
         },
         {
             "guid": "7fba909c66b25324cb77db18679c2c96",

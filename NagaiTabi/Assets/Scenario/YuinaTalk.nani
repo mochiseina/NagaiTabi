@@ -1,0 +1,14 @@
+@set G_YuinaIndex?=0
+
+@if G_YuinaIndex==0
+    @showPrinter YuinaPrinter
+    @print "Bienvenido a NagaiTabi." printer:YuinaPrinter author:Yuina !waitInput
+    @set G_YuinaIndex=1
+@else if:G_YuinaIndex==1
+    @showPrinter YuinaPrinter
+    @print "No olvides registrar tu inmersión." printer:YuinaPrinter author:Yuina !waitInput
+    @set G_YuinaIndex=2
+@else
+    @showPrinter YuinaPrinter
+    @print "Cada pequeño paso mueve el tren." printer:YuinaPrinter author:Yuina !waitInput
+    @set G_YuinaIndex=0
