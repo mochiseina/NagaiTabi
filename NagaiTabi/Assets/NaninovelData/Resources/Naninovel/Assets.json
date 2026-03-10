@@ -25,6 +25,12 @@
             "group": ""
         },
         {
+            "guid": "c236fabe25828f84a97d93bcbf380737",
+            "prefix": "Scripts",
+            "path": "MainTracker",
+            "group": ""
+        },
+        {
             "guid": "87a46c273244ae44681b8f294f31da20",
             "prefix": "Scripts",
             "path": "Title",
@@ -226,6 +232,12 @@
             "guid": "dd85ce99288c2f8488447fa511b1c0d6",
             "prefix": "UI",
             "path": "ToastUI",
+            "group": ""
+        },
+        {
+            "guid": "a933cf6317aa39441b1dc1da16484da6",
+            "prefix": "UI",
+            "path": "TrackerUI",
             "group": ""
         },
         {

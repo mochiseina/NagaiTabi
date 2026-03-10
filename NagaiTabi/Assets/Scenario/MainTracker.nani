@@ -1,0 +1,4 @@
+@showUI TrackerUI
+@printer LeftDialogue
+@showPrinter LeftDialogue
+@print "Bienvenido a NagaiTabi." as:"Yuina"
