@@ -9,11 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 97942725196343993}
+  - component: {fileID: 9102166321467135788}
   - component: {fileID: 1970821428690615310}
   - component: {fileID: 1901330591558315854}
   - component: {fileID: 4322063445146772016}
   m_Layer: 5
-  m_Name: TrackerUI
+  m_Name: TrackerUI2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39,6 +40,45 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &9102166321467135788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271607976134385326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24c749d0c675d3940923d50f77b241d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Elringus.Naninovel.Runtime::Naninovel.UI.CustomUI
+  disableInteraction: 0
+  visibleOnAwake: 0
+  controlOpacity: 1
+  fadeTime: 0.3
+  ignoreTimeScale: 1
+  focusObject: {fileID: 0}
+  focusMode: 0
+  onShow:
+    m_PersistentCalls:
+      m_Calls: []
+  onHide:
+    m_PersistentCalls:
+      m_Calls: []
+  lazyInitialize: 1
+  hideOnLoad: 1
+  hideInThumbnail: 0
+  saveVisibilityState: 0
+  blockInputWhenVisible: 0
+  allowedInputs: []
+  disableBlockedInputFeatures: 1
+  adaptToInputMode: 1
+  modalUI: 1
+  modalGroup: 
+  buttonControls: {fileID: 0}
+  keyboardControls: {fileID: 0}
+  gamepadControls: {fileID: 0}
+  fontChangeConfiguration: []
 --- !u!223 &1970821428690615310
 Canvas:
   m_ObjectHideFlags: 0
