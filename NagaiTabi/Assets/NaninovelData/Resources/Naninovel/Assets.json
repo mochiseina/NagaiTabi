@@ -37,6 +37,30 @@
             "group": ""
         },
         {
+            "guid": "520e2d1ca0777e64bbd132076ffbed12",
+            "prefix": "Scripts",
+            "path": "YuinaAfterLog_Big",
+            "group": ""
+        },
+        {
+            "guid": "0fa6be289db5a2249afbb8b35b865753",
+            "prefix": "Scripts",
+            "path": "YuinaAfterLog_Good",
+            "group": ""
+        },
+        {
+            "guid": "d4d8618cba46b9e4486fe3cf201af2cb",
+            "prefix": "Scripts",
+            "path": "YuinaAfterLog_Solid",
+            "group": ""
+        },
+        {
+            "guid": "a6ac8ef10c322d34f92116c3eff37576",
+            "prefix": "Scripts",
+            "path": "YuinaAfterLog_Tiny",
+            "group": ""
+        },
+        {
             "guid": "88725342277f50e4587895acc7b7ee7c",
             "prefix": "Scripts",
             "path": "YuinaTalk",

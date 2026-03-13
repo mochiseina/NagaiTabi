@@ -1,0 +1,2 @@
+@showPrinter YuinaPrinter
+@print "Muy bien. Ya se siente como una sesión con intención." printer:YuinaPrinter author:Yuina !waitInput

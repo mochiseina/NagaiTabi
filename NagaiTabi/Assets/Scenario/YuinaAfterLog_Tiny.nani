@@ -1,0 +1,2 @@
+@showPrinter YuinaPrinter
+@print "Bien. Incluso una sesión pequeña cuenta." printer:YuinaPrinter author:Yuina !waitInput

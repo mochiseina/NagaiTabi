@@ -1,0 +1,2 @@
+@showPrinter YuinaPrinter
+@print "Excelente. Esta ya es una sesión seria. El tren avanza de verdad así." printer:YuinaPrinter author:Yuina !waitInput
