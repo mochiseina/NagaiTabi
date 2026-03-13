@@ -1,2 +1,2 @@
 @showPrinter YuinaPrinter
-@print "Buena sesión. Así es como se construye el progreso real." printer:YuinaPrinter author:Yuina !waitInput
+@print "¡Uwah! Qué buena sesión, campeón. ¡Así es como se construye el progreso real!" printer:YuinaPrinter author:Yuina !waitInput

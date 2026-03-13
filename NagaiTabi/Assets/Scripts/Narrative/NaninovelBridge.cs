@@ -7,11 +7,11 @@ public class NaninovelBridge : MonoBehaviour
 	{
 		if (!Engine.Initialized)
 		{
-			Debug.LogWarning("Naninovel no está inicializado todavía.");
+			Debug.LogWarning("[NaninovelBridge] Naninovel no está inicializado todavía.");
 			return;
-
-			var player = Engine.GetService<IScriptPlayer>();
-			player.MainTrack.LoadAndPlay(scriptName).Forget();
 		}
+		Debug.Log($"[NaninovelBridge] Intentando reproducir script: {scriptName}");
+		var player = Engine.GetService<IScriptPlayer>();
+		player.MainTrack.LoadAndPlay(scriptName).Forget();
 	}
 }

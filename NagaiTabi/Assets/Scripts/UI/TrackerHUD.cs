@@ -9,12 +9,16 @@ public class TrackerHUD : MonoBehaviour
 	public void Refresh()
 	{
 		if (trackerManager == null || totalHoursText == null)
+		{
+			Debug.LogWarning("[TrackerHUD] Falta trackerManager o totalHoursText.");
 			return;
+		}
 
 		int totalMinutes = trackerManager.GetTotalMinutes();
 		float totalHours = totalMinutes / 60f;
 
-		totalHoursText.text = $"Total: {totalHours:0.0} h";
+		totalHoursText.text = $"Time:\n{totalHours:0.0} h";
+		Debug.Log($"[TrackerHUD] Total actualizado: {totalHours:0.0} h");
 	}
 	private void Start()
 	{

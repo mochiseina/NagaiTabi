@@ -8,19 +8,29 @@ public class YuinaDirector : MonoBehaviour
 	private void OnEnable()
 	{
 		if (trackerManager != null)
+		{
 			trackerManager.OnEntryLogged += HandleEntryLogged;
+			Debug.Log("[YuinaDirector] Suscrito a OnEntryLogged.");
+		}
+		else
+		{
+			Debug.LogWarning("[YuinaDirector] trackerManager no está asignado.");
+		}
 	}
-
 	private void OnDisable()
 	{
 		if (trackerManager != null)
 			trackerManager.OnEntryLogged -= HandleEntryLogged;
 	}
-
 	private void HandleEntryLogged(ImmersionEntry entry)
 	{
-		if (naninovelBridge == null || entry == null)
+		Debug.Log($"[YuinaDirector] Recibida entrada: {entry.minutes} min");
+
+		if (naninovelBridge == null)
+		{
+			Debug.LogWarning("[YuinaDirector] naninovelBridge no está asignado.");
 			return;
+		}
 
 		if (entry.minutes >= 120)
 			naninovelBridge.PlayScript("YuinaAfterLog_Big");
