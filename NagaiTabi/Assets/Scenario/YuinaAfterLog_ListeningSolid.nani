@@ -1,0 +1,2 @@
+@showPrinter YuinaPrinter
+@print "Muy bien. Una sesión sólida de listening suma muchísimo." printer:YuinaPrinter author:Yuina !waitInput

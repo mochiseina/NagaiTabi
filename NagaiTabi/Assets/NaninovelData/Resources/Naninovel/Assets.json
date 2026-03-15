@@ -49,6 +49,18 @@
             "group": ""
         },
         {
+            "guid": "4259b16b316bfdf4c9607507bda4f2b8",
+            "prefix": "Scripts",
+            "path": "YuinaAfterLog_ListeningSolid",
+            "group": ""
+        },
+        {
+            "guid": "cb0cff5da414664418365c9488343a30",
+            "prefix": "Scripts",
+            "path": "YuinaAfterLog_ReadingSolid",
+            "group": ""
+        },
+        {
             "guid": "d4d8618cba46b9e4486fe3cf201af2cb",
             "prefix": "Scripts",
             "path": "YuinaAfterLog_Solid",
