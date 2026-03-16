@@ -1314,6 +1314,7 @@ GameObject:
   - component: {fileID: 3676434528731440037}
   - component: {fileID: 8222115313334065297}
   - component: {fileID: 36761636686727357}
+  - component: {fileID: 4005206895102434934}
   m_Layer: 5
   m_Name: TimeReset
   m_TagString: Untagged
@@ -1338,7 +1339,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -243, y: -323}
+  m_AnchoredPosition: {x: -243, y: -333}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3676434528731440037
@@ -1422,7 +1423,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8222115313334065297}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4005206895102434934}
+        m_TargetAssemblyTypeName: DebugButtonReset, Assembly-CSharp
+        m_MethodName: ResetData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4005206895102434934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1759517293647479687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2d9f6b5b660d0742a0b57ef47ee1c4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DebugButtonReset
+  trackerManager: {fileID: 5470753887255910104}
+  trackerHUD: {fileID: 6099842111555579733}
+  logsListView: {fileID: 0}
 --- !u!1 &2325232610599369548
 GameObject:
   m_ObjectHideFlags: 0
@@ -2748,7 +2776,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 266, y: -259}
+  m_AnchoredPosition: {x: 266, y: -236}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &233045993905583039
@@ -2845,7 +2873,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: -10.433586, z: -114.12881, w: -8.694656}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3253,7 +3281,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -283.64, y: -370.05}
+  m_AnchoredPosition: {x: -281, y: -370.05}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6551419116728720858
@@ -4482,10 +4510,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81236c3e5a21155468ed087dbb15bbde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LogInputPanel
-  hoursInput: {fileID: 0}
-  minutesInput: {fileID: 2579589351780251707}
-  titleInput: {fileID: 0}
-  mediaTypeDropdown: {fileID: 0}
+  hoursInput: {fileID: 2579589351780251707}
+  minutesInput: {fileID: 4199841129473641551}
+  titleInput: {fileID: 8769023643701336891}
+  mediaTypeDropdown: {fileID: 8767467913522378048}
   trackerManager: {fileID: 5470753887255910104}
   trackerHUD: {fileID: 6099842111555579733}
   logsListView: {fileID: 0}

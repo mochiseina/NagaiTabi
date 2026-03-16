@@ -20,28 +20,28 @@ public class LogInputPanel : MonoBehaviour
 			return;
 		}
 
+		string hoursText = hoursInput != null ? hoursInput.text.Trim() : "";
+		string minutesText = minutesInput != null ? minutesInput.text.Trim() : "";
+
+		Debug.Log($"[LogInputPanel] Hours='{hoursText}' | Minutes='{minutesText}'");
+
 		int hours = 0;
 		int minutes = 0;
 
-		if (hoursInput != null && !string.IsNullOrWhiteSpace(hoursInput.text))
+		if (!string.IsNullOrWhiteSpace(hoursText) && !int.TryParse(hoursText, out hours))
 		{
-			if (!int.TryParse(hoursInput.text, out hours))
-			{
-				Debug.LogWarning("[LogInputPanel] Las horas no son válidas.");
-				return;
-			}
+			Debug.LogWarning("[LogInputPanel] Las horas no son válidas.");
+			return;
 		}
 
-		if (minutesInput != null && !string.IsNullOrWhiteSpace(minutesInput.text))
+		if (!string.IsNullOrWhiteSpace(minutesText) && !int.TryParse(minutesText, out minutes))
 		{
-			if (!int.TryParse(minutesInput.text, out minutes))
-			{
-				Debug.LogWarning("[LogInputPanel] Los minutos no son válidos.");
-				return;
-			}
+			Debug.LogWarning("[LogInputPanel] Los minutos no son válidos.");
+			return;
 		}
 
 		int totalMinutes = (hours * 60) + minutes;
+		Debug.Log($"[LogInputPanel] Total calculado: {totalMinutes} min");
 
 		if (totalMinutes <= 0)
 		{
@@ -51,7 +51,7 @@ public class LogInputPanel : MonoBehaviour
 
 		string mediaType = mediaTypeDropdown != null
 			? mediaTypeDropdown.options[mediaTypeDropdown.value].text
-			: "Audio";
+			: "Anime";
 
 		string mode = MediaTypeMapper.GetModeFromMediaType(mediaType);
 

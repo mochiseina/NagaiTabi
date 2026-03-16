@@ -18,4 +18,4 @@ MonoBehaviour:
   ActionMaps:
   - Naninovel
   DetectInputMode: 1
-  DisableInput: 0
+  DisableInput: 1
