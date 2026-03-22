@@ -11,6 +11,7 @@ public class LogInputPanel : MonoBehaviour
 	[SerializeField] private TrackerManager trackerManager;
 	[SerializeField] private TrackerHUD trackerHUD;
 	[SerializeField] private LogsListView logsListView;
+	[SerializeField] private StatsPanelView statsPanelView;
 
 	public void SubmitLog()
 	{
@@ -67,5 +68,6 @@ public class LogInputPanel : MonoBehaviour
 
 		if (trackerHUD != null) trackerHUD.Refresh();
 		if (logsListView != null) logsListView.Refresh();
+		if (statsPanelView != null) statsPanelView.Refresh();
 	}
 }

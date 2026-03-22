@@ -288,7 +288,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -387.57037, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1766,7 +1766,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -392.3359, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2201,7 +2201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DebugButtonReset
   trackerManager: {fileID: 5470753887255910104}
   trackerHUD: {fileID: 6099842111555579733}
-  logsListView: {fileID: 0}
+  logsListView: {fileID: 3601065931764939614}
 --- !u!1 &2152658657211977017
 GameObject:
   m_ObjectHideFlags: 0
@@ -3485,7 +3485,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00006696265, y: -0.0008544922}
+  m_AnchoredPosition: {x: -0.00012637021, y: -0.0008544922}
   m_SizeDelta: {x: -5.407776, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2142438407414856814
@@ -4220,7 +4220,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -201.7274, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4357,7 +4357,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -327.2114, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4963,7 +4963,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -385.9822, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -6309,6 +6309,7 @@ MonoBehaviour:
   trackerManager: {fileID: 5470753887255910104}
   trackerHUD: {fileID: 6099842111555579733}
   logsListView: {fileID: 3601065931764939614}
+  statsPanelView: {fileID: 7496400148173882298}
 --- !u!1 &7790669700948544972
 GameObject:
   m_ObjectHideFlags: 0
@@ -7278,6 +7279,7 @@ GameObject:
   - component: {fileID: 8551779782609584497}
   - component: {fileID: 4736155552909340270}
   - component: {fileID: 5961666066566185180}
+  - component: {fileID: 7496400148173882298}
   m_Layer: 5
   m_Name: StatsPanel
   m_TagString: Untagged
@@ -7297,12 +7299,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6971956292126056950}
   - {fileID: 5426295122478088906}
   - {fileID: 8684651750402231251}
   - {fileID: 9082514056472810403}
   - {fileID: 5035593983067669577}
   - {fileID: 2060264652948605267}
+  - {fileID: 6971956292126056950}
   m_Father: {fileID: 8778920362862978796}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -7348,6 +7350,24 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7496400148173882298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8422821496767744674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 244ff048daaf0334895913a84ec32b44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StatsPanelView
+  trackerManager: {fileID: 5470753887255910104}
+  ratioText: {fileID: 1306574436098564224}
+  totalReadText: {fileID: 6082697590592271987}
+  totalLogsText: {fileID: 3255050247602990601}
+  totalHoursText: {fileID: 3379895117797566255}
+  totalListenedText: {fileID: 6423597154070750175}
 --- !u!1 &8636432628114816535
 GameObject:
   m_ObjectHideFlags: 0
