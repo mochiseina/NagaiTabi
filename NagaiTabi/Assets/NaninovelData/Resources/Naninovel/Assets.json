@@ -1,6 +1,12 @@
 {
     "Assets": [
         {
+            "guid": "23277b92f6901714f8ea3a661dac53b3",
+            "prefix": "Audio",
+            "path": "ItsukaItsuka",
+            "group": ""
+        },
+        {
             "guid": "4fa6d62f894ae6e4698bfa8af59e7942",
             "prefix": "ChoiceHandlers",
             "path": "ButtonArea",
@@ -173,6 +179,12 @@
             "prefix": "TextPrinters",
             "path": "Wide",
             "group": "TextPrinters/be917cf4-5ff0-426d-9f87-c64d52aaaee7"
+        },
+        {
+            "guid": "7c7862d96404c8e49817f5e6a5f9faea",
+            "prefix": "TextPrinters",
+            "path": "YuinaIntroPrinter",
+            "group": "TextPrinters/8c4a2ed1-be79-46f9-9bb1-368c75c88a11"
         },
         {
             "guid": "193a7a6ada29ae649bd3db8f1e51bbd7",

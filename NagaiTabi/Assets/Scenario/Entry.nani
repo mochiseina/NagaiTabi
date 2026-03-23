@@ -1,21 +1,52 @@
-; Played when a new game starts.
-; Reveal a 'Mist' background over 1.5 seconds and wait for the animation.
-@back Mist.CircleReveal time:1.5 wait!
-; Print some text. New game started.
-; Show a placeholder character with 'Felix' ID and 'Excited' appearance.
-@char Felix.Excited Felix: there!
-; Hide the dialogue box. @hidePrinter ; Move Felix and make it look right.
-@char Felix pos:15 look:Right
-; Print text while changing the author appearance and don't wait CTC.
-Felix.Curious: Have you already checked out the getting started guide?[>]
-; Show a choice. @choice "Sure thing!"
-; Shake the dialogue box.
-@shake In Felix.Happy: Awesome!
-@choice "What's that?"
-; Shake Felix.
-@shake Felix
-Felix.Surprised: It's the essential guide that walks you through everything you need to get started with Naninovel.[-] You can find it at <b>naninovel.com/guide</b>. Felix.Persuasive: I highly recommend taking a look — it'll save you a lot of time. Felix: And if you prefer learning by example, you can import the 'Visual Novel' and 'Dialogue Mode' samples directly from Unity's Package Manager.
-Felix.Excited: Anyway, I truly hope you'll find Naninovel helpful and enjoyable to use.[-] If you run into any issues or have questions, feel free to reach out to support at <b>naninovel.com/support</b>.
-; Hide everything and exit to the title menu.
-@hideAll wait!
+; Entry.nani
+@stopBgm fade:0.5
+
+@processInput set:Pause.false,Rollback.false
+@bgm ItsukaItsuka
+@back TrainInterior
+@char Yuina
+
+@showPrinter YuinaIntroPrinter
+@printer YuinaIntroPrinter default! !hideOther
+
+Yuina: Ah... ya estás aquí.[-] Bienvenido a este largo viaje.
+
+Yuina: Este tren puede llevarte lejos. Muy lejos.
+Yuina: Más lejos de lo que imaginas ahora mismo.
+
+Yuina: Pero no va a moverse solo.
+Yuina: Cada paso, cada sesión, cada pequeño avance...
+Yuina: tendrás que dárselos tú.
+
+Yuina: No hace falta correr.
+Yuina: No hace falta que seas perfecto.
+Yuina: Sólo hace falta que sigas avanzando.
+
+Yuina: Yo estaré aquí para acompañarte durante el trayecto.
+Yuina: Para recordarte por qué esto funciona.
+Yuina: Y para que no olvides cuánto has recorrido ya.
+
+Yuina: Antes de partir...
+Yuina: dime cómo quieres que te llame.
+
+@input PlayerName summary:"Escribe tu nombre." type:string
+
+Yuina: {PlayerName}...
+Yuina: Sí. Creo que ese nombre le queda bien a este viaje.
+
+Yuina: Escúchame bien, {PlayerName}.
+Yuina: Puede que a veces sientas que no avanzas.
+Yuina: Puede que el camino parezca largo, pesado, incluso silencioso.
+
+Yuina: Pero incluso los viajes enormes
+Yuina: empiezan con una sola entrada en el registro.
+
+Yuina: Cuando estés listo,
+Yuina: te enseñaré el panel de operaciones.
+
+Yuina: Desde ahí empezará tu travesía de verdad.
+
+@wait 0.4
+@showUI TrackerUI
+@hideAll
 @goto MainTracker
