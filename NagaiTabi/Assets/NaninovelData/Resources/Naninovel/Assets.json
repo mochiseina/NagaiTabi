@@ -7,6 +7,12 @@
             "group": ""
         },
         {
+            "guid": "058949d70f31f934fadf66d985836017",
+            "prefix": "Characters/Yuina",
+            "path": "Neutral",
+            "group": "Characters/f6292e0c-82f6-4e23-a331-72e090f1b412"
+        },
+        {
             "guid": "4fa6d62f894ae6e4698bfa8af59e7942",
             "prefix": "ChoiceHandlers",
             "path": "ButtonArea",

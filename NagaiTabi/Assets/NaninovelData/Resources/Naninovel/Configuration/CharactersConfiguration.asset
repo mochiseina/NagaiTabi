@@ -70,8 +70,8 @@ MonoBehaviour:
     ids:
     - Yuina
     metas:
-    - Implementation: Naninovel.PlaceholderCharacter, Elringus.Naninovel.Runtime,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - Implementation: Naninovel.SpriteCharacter, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       Loader:
         PathPrefix: Characters
         ProviderTypes:
@@ -100,7 +100,7 @@ MonoBehaviour:
       HasName: 1
       DisplayName: Yuina
       UseCharacterColor: 1
-      NameColor: {r: 1, g: 1, b: 1, a: 1}
+      NameColor: {r: 0.82641506, g: 0.34148094, b: 0.34148094, a: 1}
       MessageColor: {r: 1, g: 1, b: 1, a: 1}
       HighlightWhenSpeaking: 0
       HighlightCharacterCount: 0
@@ -112,7 +112,7 @@ MonoBehaviour:
       MessageSound: 
       MessageSoundPlayback: 0
       VoiceSource: {fileID: 0}
-      LinkedPrinter: 
+      LinkedPrinter: YuinaIntroPrinter
       Poses: []
       Anchors: []
   AvatarLoader:

@@ -4,7 +4,7 @@
 @processInput set:Pause.false,Rollback.false
 @bgm ItsukaItsuka
 @back TrainInterior
-@char Yuina
+@char Yuina.Neutral scale:0.7
 
 @showPrinter YuinaIntroPrinter
 @printer YuinaIntroPrinter default! !hideOther
