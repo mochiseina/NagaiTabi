@@ -22,10 +22,12 @@ Yuina: No hace falta correr.
 Yuina: No hace falta que seas perfecto.
 Yuina: Sólo hace falta que sigas avanzando.
 
+@char Yuina.Wink scale:0.7
 Yuina: Yo estaré aquí para acompañarte durante el trayecto.
 Yuina: Para recordarte por qué esto funciona.
 Yuina: Y para que no olvides cuánto has recorrido ya.
 
+@char Yuina.Neutral scale:0.7
 Yuina: Antes de partir...
 Yuina: dime cómo quieres que te llame.
 
@@ -38,12 +40,14 @@ Yuina: Escúchame bien, {PlayerName}.
 Yuina: Puede que a veces sientas que no avanzas.
 Yuina: Puede que el camino parezca largo, pesado, incluso silencioso.
 
+@char Yuina.Wink scale:0.7
 Yuina: Pero incluso los viajes enormes
 Yuina: empiezan con una sola entrada en el registro.
 
 Yuina: Cuando estés listo,
 Yuina: te enseñaré el panel de operaciones.
 
+@char Yuina.Neutral scale:0.7
 Yuina: Desde ahí empezará tu travesía de verdad.
 
 @wait 0.4

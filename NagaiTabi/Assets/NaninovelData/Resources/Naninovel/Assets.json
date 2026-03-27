@@ -13,6 +13,12 @@
             "group": "Characters/f6292e0c-82f6-4e23-a331-72e090f1b412"
         },
         {
+            "guid": "18d1484015f82b644b3eac1aade3fa93",
+            "prefix": "Characters/Yuina",
+            "path": "Wink",
+            "group": "Characters/f6292e0c-82f6-4e23-a331-72e090f1b412"
+        },
+        {
             "guid": "4fa6d62f894ae6e4698bfa8af59e7942",
             "prefix": "ChoiceHandlers",
             "path": "ButtonArea",
