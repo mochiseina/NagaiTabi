@@ -6,6 +6,8 @@ public class TabController : MonoBehaviour
 	[SerializeField] private GameObject statsPanel;
 	[SerializeField] private GameObject guidePanel;
 
+	[SerializeField] private PlayerProfileView playerProfileView;
+
 	private GameObject currentOpenPanel;
 
 	private void Start()
@@ -16,8 +18,10 @@ public class TabController : MonoBehaviour
 	public void ToggleProfile()
 	{
 		TogglePanel(profilePanel);
-	}
 
+		if (currentOpenPanel == profilePanel && playerProfileView != null)
+			playerProfileView.RefreshFromNaninovel();
+	}
 	public void ToggleStats()
 	{
 		TogglePanel(statsPanel);
@@ -27,18 +31,16 @@ public class TabController : MonoBehaviour
 	{
 		TogglePanel(guidePanel);
 	}
-
 	private void TogglePanel(GameObject targetPanel)
 	{
 		if (targetPanel == null) return;
 
-		// ya estaba abierto, se cierra y volvemos al panel de operaciones
 		if (currentOpenPanel == targetPanel && targetPanel.activeSelf)
 		{
 			CloseAllPanels();
 			return;
 		}
-		// abrimos el nuevo y cerramos los demás
+
 		CloseAllPanels();
 		targetPanel.SetActive(true);
 		currentOpenPanel = targetPanel;

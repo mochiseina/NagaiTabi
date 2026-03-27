@@ -10,26 +10,23 @@
 @printer YuinaIntroPrinter default! !hideOther
 
 Yuina: Ah... ya estás aquí.[-] Bienvenido a este largo viaje.
+Yuina: La verdad es que vengo a soltarte un tochaco de texto inútil para demostrar que esto furula, pero bueno.
 
-Yuina: Este tren puede llevarte lejos. Muy lejos.
+Yuina: Ejem... entonces, [-]este tren puede llevarte lejos. Muy lejos.
 Yuina: Más lejos de lo que imaginas ahora mismo.
 
 Yuina: Pero no va a moverse solo.
-Yuina: Cada paso, cada sesión, cada pequeño avance...
-Yuina: tendrás que dárselos tú.
+Yuina: Cada paso, cada sesión, cada pequeño avance... [-]tendrás que dárselos tú.
 
-Yuina: No hace falta correr.
-Yuina: No hace falta que seas perfecto.
+Yuina: No hace falta correr. [-]No hace falta que seas perfecto.
 Yuina: Sólo hace falta que sigas avanzando.
 
 @char Yuina.Wink scale:0.7
-Yuina: Yo estaré aquí para acompañarte durante el trayecto.
-Yuina: Para recordarte por qué esto funciona.
+Yuina: Yo estaré aquí para acompañarte durante el trayecto. [-]Para recordarte por qué esto funciona.
 Yuina: Y para que no olvides cuánto has recorrido ya.
 
 @char Yuina.Neutral scale:0.7
-Yuina: Antes de partir...
-Yuina: dime cómo quieres que te llame.
+Yuina: Antes de partir... [-]dime cómo quieres que te llame.
 
 @input PlayerName summary:"Escribe tu nombre." type:string
 
@@ -41,14 +38,12 @@ Yuina: Puede que a veces sientas que no avanzas.
 Yuina: Puede que el camino parezca largo, pesado, incluso silencioso.
 
 @char Yuina.Wink scale:0.7
-Yuina: Pero incluso los viajes enormes
-Yuina: empiezan con una sola entrada en el registro.
+Yuina: Pero incluso los viajes enormes [-]empiezan con una sola entrada en el registro.
 
-Yuina: Cuando estés listo,
-Yuina: te enseñaré el panel de operaciones.
+Yuina: Cuando estés listo, [-]te enseñaré el panel de operaciones.
 
 @char Yuina.Neutral scale:0.7
-Yuina: Desde ahí empezará tu travesía de verdad.
+Yuina: Desde ahí empezará tu travesía de verdad. [-]Descuida, te acostumbrarás pronto.
 
 @wait 0.4
 @showUI TrackerUI

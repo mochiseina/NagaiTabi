@@ -906,7 +906,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2207698170065588262}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.99996406
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2411,8 +2411,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -21, y: 190}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 153.18213, y: 174.58563}
+  m_SizeDelta: {x: 483.1769, y: 75.0599}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7887656565667735899
 CanvasRenderer:
@@ -3622,7 +3622,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.02357373, y: -0.0008544922}
+  m_AnchoredPosition: {x: 0.00006048797, y: -0.0008544922}
   m_SizeDelta: {x: -5.407776, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2142438407414856814
@@ -5398,6 +5398,7 @@ MonoBehaviour:
   profilePanel: {fileID: 5949872530309149935}
   statsPanel: {fileID: 8422821496767744674}
   guidePanel: {fileID: 192762221236850249}
+  playerProfileView: {fileID: 2328075701741986788}
 --- !u!1 &6902385093619397407
 GameObject:
   m_ObjectHideFlags: 0
