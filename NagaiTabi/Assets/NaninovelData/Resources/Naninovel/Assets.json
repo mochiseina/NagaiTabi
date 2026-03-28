@@ -37,6 +37,12 @@
             "group": "ChoiceHandlers/aa5b55ba-330f-482c-9fcc-b18928a2305d"
         },
         {
+            "guid": "f651b681a43926243bcc057f125c7dd9",
+            "prefix": "Fonts",
+            "path": "NotoSansJP-VariableFont_wght SDF",
+            "group": ""
+        },
+        {
             "guid": "307bd813e0993ef4786b4137608d716a",
             "prefix": "Scripts",
             "path": "Entry",
