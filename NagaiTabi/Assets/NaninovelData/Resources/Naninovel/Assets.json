@@ -7,6 +7,12 @@
             "group": ""
         },
         {
+            "guid": "d1d28a053c38b0e48aa5b889db0057d0",
+            "prefix": "Audio",
+            "path": "LaCancionDelPollo",
+            "group": ""
+        },
+        {
             "guid": "058949d70f31f934fadf66d985836017",
             "prefix": "Characters/Yuina",
             "path": "Neutral",
