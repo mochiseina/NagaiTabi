@@ -13,6 +13,24 @@
             "group": ""
         },
         {
+            "guid": "08322705d87f2b3458589e6467166197",
+            "prefix": "Backgrounds/MainBackground",
+            "path": "BG_MT_Morning",
+            "group": "Backgrounds/cb3b6c32-610b-45ee-869f-1f2624ae8547"
+        },
+        {
+            "guid": "6e385d1845e48254abda303a1603f8e8",
+            "prefix": "Backgrounds/MainBackground",
+            "path": "BG_MT_Night",
+            "group": "Backgrounds/cb3b6c32-610b-45ee-869f-1f2624ae8547"
+        },
+        {
+            "guid": "06966371941027a43b450bf1cb4dde56",
+            "prefix": "Backgrounds/MainBackground",
+            "path": "BG_MT_Sunset",
+            "group": "Backgrounds/cb3b6c32-610b-45ee-869f-1f2624ae8547"
+        },
+        {
             "guid": "058949d70f31f934fadf66d985836017",
             "prefix": "Characters/Yuina",
             "path": "Neutral",
@@ -64,6 +82,24 @@
             "guid": "87a46c273244ae44681b8f294f31da20",
             "prefix": "Scripts",
             "path": "Title",
+            "group": ""
+        },
+        {
+            "guid": "833e4e246ab86094d81427b08739770e",
+            "prefix": "Scripts",
+            "path": "TOD_Morning",
+            "group": ""
+        },
+        {
+            "guid": "7f355f849ec30df4daf04762c3aa579c",
+            "prefix": "Scripts",
+            "path": "TOD_Night",
+            "group": ""
+        },
+        {
+            "guid": "6d26ccb7b4c83f84ca081338abef1d95",
+            "prefix": "Scripts",
+            "path": "TOD_Sunset",
             "group": ""
         },
         {
