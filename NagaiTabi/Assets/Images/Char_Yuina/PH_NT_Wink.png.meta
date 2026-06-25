@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 18d1484015f82b644b3eac1aade3fa93
+guid: 063b2f8d0ed22c543a82c0ad03561fe0
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -116,10 +116,10 @@ TextureImporter:
       name: PH_NT_Wink_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2
-        width: 739
-        height: 1327
+        x: 14
+        y: 11
+        width: 1635
+        height: 2898
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

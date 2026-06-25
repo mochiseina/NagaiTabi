@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e290b403b9a98234b86e5f0dac249216
+guid: 058949d70f31f934fadf66d985836017
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -87,7 +87,7 @@ TextureImporter:
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 12
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -116,10 +116,10 @@ TextureImporter:
       name: PH_NT_Yuina_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 11
-        width: 1635
-        height: 2898
+        x: 0
+        y: 2
+        width: 739
+        height: 1327
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

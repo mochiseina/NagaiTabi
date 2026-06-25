@@ -580,8 +580,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5, y: 47}
-  m_SizeDelta: {x: 224.0222, y: 249.6449}
+  m_AnchoredPosition: {x: 1.9058, y: -36.542114}
+  m_SizeDelta: {x: 286.1438, y: 396.9452}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4295729155004195430
 CanvasRenderer:
@@ -908,7 +908,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2207698170065588262}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.99998164
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1640,7 +1640,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1443094392739251405}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.9999903
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3233,8 +3233,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.1, y: 0.25}
   m_AnchorMax: {x: 0.9, y: 0.85}
-  m_AnchoredPosition: {x: 12, y: 34}
-  m_SizeDelta: {x: 103.06003, y: 99.350006}
+  m_AnchoredPosition: {x: -15, y: -54}
+  m_SizeDelta: {x: 108.9027, y: 175.305}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6847616931436255091
 CanvasRenderer:
@@ -3264,7 +3264,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 058949d70f31f934fadf66d985836017, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e290b403b9a98234b86e5f0dac249216, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -3887,6 +3887,7 @@ GameObject:
   - component: {fileID: 5231894911363871049}
   - component: {fileID: 7983109657891018551}
   - component: {fileID: 1367015393967421549}
+  - component: {fileID: 4075982407490530272}
   m_Layer: 5
   m_Name: LeftPanel
   m_TagString: Untagged
@@ -3952,6 +3953,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4075982407490530272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3935231494706375316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26203becd87243644a069b8cd823dd63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NagaiTabi.Runtime.TimeOfDay.TimeOfDayBackgroundUI
+  targetImage: {fileID: 1367015393967421549}
+  daySprite: {fileID: 0}
+  sunsetSprite: {fileID: 0}
+  nightSprite: {fileID: 0}
+  crossfadeDuration: 1
+  checkPeriodically: 1
+  checkIntervalSeconds: 60
 --- !u!1 &4077709129852649266
 GameObject:
   m_ObjectHideFlags: 0
@@ -4228,7 +4248,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00069289084, y: -0.0004272461}
+  m_AnchoredPosition: {x: 0.00066024327, y: -0.00079345703}
   m_SizeDelta: {x: -5.407776, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2142438407414856814

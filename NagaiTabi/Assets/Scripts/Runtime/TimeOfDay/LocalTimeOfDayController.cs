@@ -7,54 +7,80 @@ using NagaiTabi.TimeOfDay;
 
 namespace NagaiTabi.Runtime.TimeOfDay
 {
+	/// <summary>
+	/// Cambia el fondo del MainBackground de Naninovel según la hora local,
+	/// SIN reproducir scripts (no secuestra la VN). También tinta a Yuina y un overlay opcional.
+	/// </summary>
 	public class LocalTimeOfDayController : MonoBehaviour
 	{
-		[Header("Background Names (Naninovel)")]
+		// IMPORTANTE: estos son los NOMBRES DE APARIENCIA tal y como los registres en
+		// Naninovel -> Resources -> Backgrounds dentro del actor MainBackground.
+		// NO son nombres de script. Cámbialos para que coincidan EXACTO (mayúsculas incluidas).
+		[Header("Apariencias del MainBackground (Naninovel -> Resources -> Backgrounds)")]
 		[SerializeField] private string dayBackground = "BG_MT_Morning";
 		[SerializeField] private string sunsetBackground = "BG_MT_Sunset";
 		[SerializeField] private string nightBackground = "BG_MT_Night";
 
-		[Header("Character / UI Tint")]
+		[Header("Transición")]
+		[SerializeField] private float transitionDuration = 1.5f;
+
+		[Header("Tinte de personaje / UI (opcional)")]
 		[SerializeField] private Image characterImage;
 		[SerializeField] private Image ambientOverlay;
 
-		[Header("Update")]
-		[SerializeField] private bool updateEveryMinute = true;
+		[Header("Comprobación periódica")]
+		[SerializeField] private bool checkPeriodically = true;
 		[SerializeField] private float checkIntervalSeconds = 60f;
 
 		private TimeOfDayPeriod currentPeriod;
 		private bool initialized;
 
-		private async void Start()
+		private void Start()
 		{
-			await RuntimeInitializer.Initialize();
-			await ApplyLocalTimeAsync();
+			StartCoroutine(Boot());
+		}
+
+		private IEnumerator Boot()
+		{
+			// Esperamos a Naninovel sin usar async void (que oculta las excepciones).
+			while (!Engine.Initialized)
+				yield return null;
+
+			_ = ApplyLocalTimeAsync(); // primera aplicación (la sincroniza el try/catch interno)
 			initialized = true;
 
-			if (updateEveryMinute)
+			if (checkPeriodically)
 				StartCoroutine(CheckTimeRoutine());
 		}
 
 		private IEnumerator CheckTimeRoutine()
 		{
+			var wait = new WaitForSeconds(checkIntervalSeconds);
 			while (true)
 			{
-				yield return new WaitForSeconds(checkIntervalSeconds);
+				yield return wait;
 				_ = ApplyLocalTimeAsync();
 			}
 		}
 
 		public async Awaitable ApplyLocalTimeAsync()
 		{
-			var hour = DateTime.Now.Hour;
-			var newPeriod = ResolvePeriod(hour);
+			try
+			{
+				var newPeriod = ResolvePeriod(DateTime.Now.Hour);
 
-			if (initialized && newPeriod == currentPeriod)
-				return;
+				// Si ya estamos en ese periodo, no hacemos nada (evita transición a la misma apariencia).
+				if (initialized && newPeriod == currentPeriod)
+					return;
 
-			currentPeriod = newPeriod;
-			ApplyCharacterTint(newPeriod);
-			await ApplyBackgroundAsync(newPeriod);
+				currentPeriod = newPeriod;
+				ApplyCharacterTint(newPeriod);
+				await ApplyBackgroundAsync(newPeriod);
+			}
+			catch (Exception e)
+			{
+				Debug.LogError($"[TimeOfDay] Error aplicando la hora local: {e}");
+			}
 		}
 
 		public async Awaitable ForcePeriodAsync(TimeOfDayPeriod period)
@@ -71,53 +97,58 @@ namespace NagaiTabi.Runtime.TimeOfDay
 			return TimeOfDayPeriod.Night;
 		}
 
+		private string AppearanceFor(TimeOfDayPeriod period) => period switch
+		{
+			TimeOfDayPeriod.Day => dayBackground,
+			TimeOfDayPeriod.Sunset => sunsetBackground,
+			TimeOfDayPeriod.Night => nightBackground,
+			_ => dayBackground
+		};
+
+		private async Awaitable ApplyBackgroundAsync(TimeOfDayPeriod period)
+		{
+			if (!Engine.Initialized) return;
+
+			var backManager = Engine.GetService<IBackgroundManager>();
+			// "MainBackground" es el ID por defecto del fondo principal.
+			var main = backManager.GetActor("MainBackground");
+			if (main == null)
+			{
+				Debug.LogWarning("[TimeOfDay] No se encontró el actor MainBackground.");
+				return;
+			}
+
+			// ── FIRMA CORRECTA EN 1.21 ──────────────────────────────────────────────────
+			// ChangeAppearance ya no acepta un float: la duración va dentro de un Tween.
+			// new Tween(duración) usa el cross-fade y easing por defecto. Si quisieras un
+			// easing concreto: new Tween(transitionDuration, EasingType.EaseOutSine).
+			await main.ChangeAppearance(AppearanceFor(period), new Tween(transitionDuration));
+			// ────────────────────────────────────────────────────────────────────────────
+		}
+
 		private void ApplyCharacterTint(TimeOfDayPeriod period)
 		{
 			if (characterImage != null)
 			{
-				switch (period)
+				characterImage.color = period switch
 				{
-					case TimeOfDayPeriod.Day:
-						characterImage.color = Color.white;
-						break;
-					case TimeOfDayPeriod.Sunset:
-						characterImage.color = new Color(1f, 0.86f, 0.78f, 1f);
-						break;
-					case TimeOfDayPeriod.Night:
-						characterImage.color = new Color(0.78f, 0.84f, 1f, 1f);
-						break;
-				}
+					TimeOfDayPeriod.Day => Color.white,
+					TimeOfDayPeriod.Sunset => new Color(1f, 0.86f, 0.78f, 1f),
+					TimeOfDayPeriod.Night => new Color(0.78f, 0.84f, 1f, 1f),
+					_ => Color.white
+				};
 			}
 
 			if (ambientOverlay != null)
 			{
-				switch (period)
+				ambientOverlay.color = period switch
 				{
-					case TimeOfDayPeriod.Day:
-						ambientOverlay.color = new Color(1f, 1f, 1f, 0f);
-						break;
-					case TimeOfDayPeriod.Sunset:
-						ambientOverlay.color = new Color(1f, 0.55f, 0.3f, 0.12f);
-						break;
-					case TimeOfDayPeriod.Night:
-						ambientOverlay.color = new Color(0.15f, 0.22f, 0.45f, 0.18f);
-						break;
-				}
+					TimeOfDayPeriod.Day => new Color(1f, 1f, 1f, 0f),
+					TimeOfDayPeriod.Sunset => new Color(1f, 0.55f, 0.3f, 0.12f),
+					TimeOfDayPeriod.Night => new Color(0.15f, 0.22f, 0.45f, 0.18f),
+					_ => new Color(1f, 1f, 1f, 0f)
+				};
 			}
-		}
-		private async Awaitable ApplyBackgroundAsync(TimeOfDayPeriod period)
-		{
-			var player = Engine.GetService<IScriptPlayer>();
-
-			string scriptName = period switch
-			{
-				TimeOfDayPeriod.Day => "TOD_Morning",
-				TimeOfDayPeriod.Sunset => "TOD_Sunset",
-				TimeOfDayPeriod.Night => "TOD_Night",
-				_ => "TOD_Morning"
-			};
-
-			await player.MainTrack.LoadAndPlay(scriptName);
 		}
 	}
 }
