@@ -1,0 +1,520 @@
+fileFormatVersion: 2
+guid: ce2c691bed67a5245a2e4f1f5e939598
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4541072053031354173
+    second: PH_NT_Hehe_0
+  - first:
+      213: 5634953770066466330
+    second: PH_NT_Hehe_1
+  - first:
+      213: -3607378019015894345
+    second: PH_NT_Hehe_2
+  - first:
+      213: -8370830870881560709
+    second: PH_NT_Hehe_3
+  - first:
+      213: -8366309336587645537
+    second: PH_NT_Hehe_4
+  - first:
+      213: -9057378762452100286
+    second: PH_NT_Hehe_5
+  - first:
+      213: 8352998894029021824
+    second: PH_NT_Hehe_6
+  - first:
+      213: 341431575515910591
+    second: PH_NT_Hehe_7
+  - first:
+      213: -8628523512110767230
+    second: PH_NT_Hehe_8
+  - first:
+      213: 2415964782166307372
+    second: PH_NT_Hehe_9
+  - first:
+      213: -6346550798376892009
+    second: PH_NT_Hehe_10
+  - first:
+      213: 6488886375861875966
+    second: PH_NT_Hehe_11
+  - first:
+      213: 6754685451951305746
+    second: PH_NT_Hehe_12
+  - first:
+      213: -3273890957369511682
+    second: PH_NT_Hehe_13
+  - first:
+      213: 4303046208644104395
+    second: PH_NT_Hehe_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PH_NT_Hehe_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1762
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3f336cf8f0250f30800000000000000
+      internalID: 4541072053031354173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH_NT_Hehe_1
+      rect:
+        serializedVersion: 2
+        x: 1879
+        y: 1768
+        width: 169
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a165f8e3990633e40800000000000000
+      internalID: 5634953770066466330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH_NT_Hehe_2
+      rect:
+        serializedVersion: 2
+        x: 2042
+        y: 1675
+        width: 6
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ba510eedc400fdc0800000000000000
+      internalID: -3607378019015894345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH_NT_Hehe_3
+      rect:
+        serializedVersion: 2
+        x: 2041
+        y: 1472
+        width: 7
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b771b3a6ca5d4db80800000000000000
+      internalID: -8370830870881560709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH_NT_Hehe_4
+      rect:
+        serializedVersion: 2
+        x: 2042
+        y: 1366
+        width: 6
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9dc8a72cf5e4eb80800000000000000
+      internalID: -8366309336587645537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH_NT_Hehe_5
+      rect:
+        serializedVersion: 2
+        x: 2043
+        y: 1251
+        width: 5
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24b10ebe00abd4280800000000000000
+      internalID: -9057378762452100286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH_NT_Hehe_6
+      rect:
+        serializedVersion: 2
+        x: 2043
+        y: 1050
+        width: 5
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 082a4dfec30dbe370800000000000000
+      internalID: 8352998894029021824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH_NT_Hehe_7
+      rect:
+        serializedVersion: 2
+        x: 1841
+        y: 841
+        width: 207
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb15abd75320db400800000000000000
+      internalID: 341431575515910591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH_NT_Hehe_8
+      rect:
+        serializedVersion: 2
+        x: 2042
+        y: 655
+        width: 6
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2832884e493514880800000000000000
+      internalID: -8628523512110767230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH_NT_Hehe_9
+      rect:
+        serializedVersion: 2
+        x: 2041
+        y: 608
+        width: 7
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2270e64b2b378120800000000000000
+      internalID: 2415964782166307372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH_NT_Hehe_10
+      rect:
+        serializedVersion: 2
+        x: 2042
+        y: 485
+        width: 6
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79906c1aca58ce7a0800000000000000
+      internalID: -6346550798376892009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH_NT_Hehe_11
+      rect:
+        serializedVersion: 2
+        x: 2042
+        y: 317
+        width: 6
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef47e1d77c72d0a50800000000000000
+      internalID: 6488886375861875966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH_NT_Hehe_12
+      rect:
+        serializedVersion: 2
+        x: 1892
+        y: 0
+        width: 156
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2147e0571a67dbd50800000000000000
+      internalID: 6754685451951305746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH_NT_Hehe_13
+      rect:
+        serializedVersion: 2
+        x: 2042
+        y: 83
+        width: 6
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef070a4258dc092d0800000000000000
+      internalID: -3273890957369511682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH_NT_Hehe_14
+      rect:
+        serializedVersion: 2
+        x: 1213
+        y: 0
+        width: 27
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc0c25e6abd77bb30800000000000000
+      internalID: 4303046208644104395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PH_NT_Hehe_0: 4541072053031354173
+      PH_NT_Hehe_1: 5634953770066466330
+      PH_NT_Hehe_10: -6346550798376892009
+      PH_NT_Hehe_11: 6488886375861875966
+      PH_NT_Hehe_12: 6754685451951305746
+      PH_NT_Hehe_13: -3273890957369511682
+      PH_NT_Hehe_14: 4303046208644104395
+      PH_NT_Hehe_2: -3607378019015894345
+      PH_NT_Hehe_3: -8370830870881560709
+      PH_NT_Hehe_4: -8366309336587645537
+      PH_NT_Hehe_5: -9057378762452100286
+      PH_NT_Hehe_6: 8352998894029021824
+      PH_NT_Hehe_7: 341431575515910591
+      PH_NT_Hehe_8: -8628523512110767230
+      PH_NT_Hehe_9: 2415964782166307372
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

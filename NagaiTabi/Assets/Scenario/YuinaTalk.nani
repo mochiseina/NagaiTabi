@@ -2,13 +2,22 @@
 
 @if G_YuinaIndex==0
     @showPrinter YuinaPrinter
+    @printer YuinaPrinter tint:#FF000099
+    @set YuinaPose="Neutral"
+    @char Yuina.{YuinaPose} pos:23,0 scale:0.5 wait:false
     @print "Bienvenido a NagaiTabi." printer:YuinaPrinter author:Yuina !waitInput
     @set G_YuinaIndex=1
 @else if:G_YuinaIndex==1
     @showPrinter YuinaPrinter
+    @printer YuinaPrinter tint:#FF000099
+    @set YuinaPose="Hehe"
+    @char Yuina.{YuinaPose} pos:23,0 scale:0.5 wait:false 
     @print "No olvides registrar tu inmersión." printer:YuinaPrinter author:Yuina !waitInput
     @set G_YuinaIndex=2
 @else
     @showPrinter YuinaPrinter
+    @printer YuinaPrinter tint:#FF000099
+    @set YuinaPose="Wink"
+    @char Yuina.{YuinaPose} pos:23,0 scale:0.5 wait:false
     @print "Cada pequeño paso mueve el tren." printer:YuinaPrinter author:Yuina !waitInput
     @set G_YuinaIndex=0

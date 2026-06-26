@@ -15,20 +15,26 @@
         {
             "guid": "08322705d87f2b3458589e6467166197",
             "prefix": "Backgrounds/MainBackground",
-            "path": "BG_MT_Morning",
+            "path": "Day",
             "group": "Backgrounds/cb3b6c32-610b-45ee-869f-1f2624ae8547"
         },
         {
             "guid": "6e385d1845e48254abda303a1603f8e8",
             "prefix": "Backgrounds/MainBackground",
-            "path": "BG_MT_Night",
+            "path": "Night",
             "group": "Backgrounds/cb3b6c32-610b-45ee-869f-1f2624ae8547"
         },
         {
             "guid": "06966371941027a43b450bf1cb4dde56",
             "prefix": "Backgrounds/MainBackground",
-            "path": "BG_MT_Sunset",
+            "path": "Sunset",
             "group": "Backgrounds/cb3b6c32-610b-45ee-869f-1f2624ae8547"
+        },
+        {
+            "guid": "ce2c691bed67a5245a2e4f1f5e939598",
+            "prefix": "Characters/Yuina",
+            "path": "Hehe",
+            "group": "Characters/f6292e0c-82f6-4e23-a331-72e090f1b412"
         },
         {
             "guid": "e290b403b9a98234b86e5f0dac249216",
@@ -87,7 +93,7 @@
         {
             "guid": "833e4e246ab86094d81427b08739770e",
             "prefix": "Scripts",
-            "path": "TOD_Morning",
+            "path": "TOD_Day",
             "group": ""
         },
         {

@@ -1,1 +1,2 @@
-@back BG_MT_Night
+@back Night tint:#C8D4FF time:1.5
+@char Yuina.{YuinaPose} pos:23,0 scale:0.5 tint:#C8D4FF time:1.5 wait:false

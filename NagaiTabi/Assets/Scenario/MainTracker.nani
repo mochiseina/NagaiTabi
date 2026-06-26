@@ -1,2 +1,7 @@
 @showUI TrackerUI
+@activatetimeofday
+@back Day
+@char Yuina.Neutral pos:27,0 scale:0.5 visible:true tint:#FFFFFFFF wait:false
 @bgm Nocheviento
+@printer YuinaPrinter tint:#FFFFFFFF
+@stop

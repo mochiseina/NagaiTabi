@@ -21,7 +21,7 @@ Yuina: Cada paso, cada sesión, cada pequeño avance... [-]tendrás que dárselo
 Yuina: No hace falta correr. [-]No hace falta que seas perfecto.
 Yuina: Sólo hace falta que sigas avanzando.
 
-@char Yuina.Wink scale:0.5
+@char Yuina.Hehe scale:0.5
 Yuina: Yo estaré aquí para acompañarte durante el trayecto. [-]Para recordarte por qué esto funciona.
 Yuina: Y para que no olvides cuánto has recorrido ya.
 
@@ -37,7 +37,7 @@ Yuina: Escúchame bien, {PlayerName}.
 Yuina: Puede que a veces sientas que no avanzas.
 Yuina: Puede que el camino parezca largo, pesado, incluso silencioso.
 
-@char Yuina.Wink scale:0.5
+@char Yuina.Hehe scale:0.5
 Yuina: Pero incluso los viajes enormes [-]empiezan con una sola entrada en el registro.
 
 Yuina: Cuando estés listo, [-]te enseñaré el panel de operaciones.
@@ -46,6 +46,5 @@ Yuina: Cuando estés listo, [-]te enseñaré el panel de operaciones.
 Yuina: Desde ahí empezará tu travesía de verdad. [-]Descuida, te acostumbrarás pronto.
 
 @wait 0.4
-@showUI TrackerUI
 @hideAll
 @goto MainTracker
