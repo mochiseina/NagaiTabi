@@ -65,8 +65,8 @@ namespace NagaiTabi.Runtime.TimeOfDay
 
         private Period ResolvePeriod(int hour)
         {
-            if (hour >= 6 && hour < 17) return Period.Day;
-            if (hour >= 17 && hour < 20) return Period.Sunset;
+            if (hour >= 6 && hour < 16) return Period.Day;
+            if (hour >= 16 && hour < 20) return Period.Sunset;
             return Period.Night;
         }
 
