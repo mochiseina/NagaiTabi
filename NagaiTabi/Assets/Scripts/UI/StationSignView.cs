@@ -3,69 +3,85 @@ using UnityEngine;
 using NagaiTabi.Journey;
 
 /// <summary>
-/// Rellena el cartel de estación del tracker (estación actual, siguiente y horas
-/// que faltan) usando las horas totales de inmersión y la lógica de JourneyMap.
+/// Rellena el cartel de estación tipo tren japonés (debajo del mapa):
+///   - NS: número de línea (01..15) de la estación actual.
+///   - Estación actual: nombre japonés + romaji.
+///   - つぎは: siguiente estación, nombre japonés + romaji.
+///   - Horas restantes para la siguiente estación.
 ///
-/// No dibuja el mapa: solo el cartel de texto. Sirve para ver el sistema funcionando
-/// con datos reales antes de tener el gráfico del mapa.
-///
-/// SETUP: pon este componente en el objeto del cartel, asigna el TrackerManager
-/// y los textos (TMP) que quieras rellenar. Llama a Refresh() al entrar al tracker
-/// y cada vez que se loguee algo (igual que haces con TrackerHUD).
+/// Mapeo de tu jerarquía -> campos:
+///   StationNumber      -> stationNumberText
+///   StationName        -> currentStationJpText   (japonés actual, p. ej. 沖縄)
+///   StationRomaji      -> currentStationRomajiText (Okinawa)
+///   NextStationName    -> nextStationJpText       (japonés siguiente, p. ej. 熊本)
+///   NextStationRomaji  -> nextStationRomajiText   (Kumamoto)
+///   HoursLeftText      -> hoursLeftText
 /// </summary>
 public class StationSignView : MonoBehaviour
 {
-    [SerializeField] private TrackerManager trackerManager;
+	[SerializeField] private TrackerManager trackerManager;
 
-    [Header("Textos del cartel (asigna los que uses)")]
-    [Tooltip("Estación actual, p. ej. 'Yamaguchi'.")]
-    [SerializeField] private TMP_Text currentStationText;
-    [Tooltip("Próxima estación, p. ej. 'Hiroshima'.")]
-    [SerializeField] private TMP_Text nextStationText;
-    [Tooltip("Horas que faltan, p. ej. '15 hours'.")]
-    [SerializeField] private TMP_Text hoursLeftText;
+	[Header("Número de línea (NS)")]
+	[SerializeField] private TMP_Text stationNumberText;
 
-    public void Refresh()
-    {
-        if (trackerManager == null)
-        {
-            Debug.LogWarning("[StationSignView] Falta trackerManager.");
-            return;
-        }
+	[Header("Estación actual")]
+	[SerializeField] private TMP_Text currentStationJpText;
+	[SerializeField] private TMP_Text currentStationRomajiText;
 
-        float totalHours = trackerManager.GetTotalMinutes() / 60f;
+	[Header("Siguiente estación (つぎは)")]
+	[SerializeField] private TMP_Text nextStationJpText;
+	[SerializeField] private TMP_Text nextStationRomajiText;
 
-        var current = JourneyMap.GetCurrentStation(totalHours);
-        var next = JourneyMap.GetNextStation(totalHours);
-        float hoursLeft = JourneyMap.GetHoursToNextStation(totalHours);
+	[Header("Horas restantes")]
+	[SerializeField] private TMP_Text hoursLeftText;
 
-        if (currentStationText != null)
-            currentStationText.text = current.name;
+	public void Refresh()
+	{
+		if (trackerManager == null)
+		{
+			Debug.LogWarning("[StationSignView] Falta trackerManager.");
+			return;
+		}
 
-        if (next == null)
-        {
-            // Ya en Wakkanai: fin del viaje.
-            if (nextStationText != null) nextStationText.text = "終点 · Wakkanai";
-            if (hoursLeftText != null) hoursLeftText.text = "¡Has llegado al final!";
-        }
-        else
-        {
-            if (nextStationText != null)
-                nextStationText.text = next.name;
+		float totalHours = trackerManager.GetTotalMinutes() / 60f;
 
-            if (hoursLeftText != null)
-            {
-                // Redondea a 1 decimal; si es menos de 1h, muestra los minutos.
-                if (hoursLeft >= 1f)
-                    hoursLeftText.text = $"{hoursLeft:0.#} hours";
-                else
-                    hoursLeftText.text = $"{Mathf.CeilToInt(hoursLeft * 60f)} min";
-            }
-        }
-    }
+		int currentIndex = JourneyMap.GetCurrentStationIndex(totalHours);
+		var current = JourneyMap.Stations[currentIndex];
+		var next = JourneyMap.GetNextStation(totalHours);
+		float hoursLeft = JourneyMap.GetHoursToNextStation(totalHours);
 
-    private void Start()
-    {
-        Refresh();
-    }
+		// NS: 01..15
+		if (stationNumberText != null)
+			stationNumberText.text = (currentIndex + 1).ToString("00");
+
+		// Estación actual (japonés + romaji)
+		if (currentStationJpText != null) currentStationJpText.text = current.nameJp;
+		if (currentStationRomajiText != null) currentStationRomajiText.text = current.name;
+
+		if (next == null)
+		{
+			// Final del viaje: Wakkanai.
+			if (nextStationJpText != null) nextStationJpText.text = "終点";
+			if (nextStationRomajiText != null) nextStationRomajiText.text = "Shūten";
+			if (hoursLeftText != null) hoursLeftText.text = "—";
+		}
+		else
+		{
+			if (nextStationJpText != null) nextStationJpText.text = next.nameJp;
+			if (nextStationRomajiText != null) nextStationRomajiText.text = next.name;
+
+			if (hoursLeftText != null)
+			{
+				if (hoursLeft >= 1f)
+					hoursLeftText.text = $"{hoursLeft:0.#} hrs.";
+				else
+					hoursLeftText.text = $"{Mathf.CeilToInt(hoursLeft * 60f)} min";
+			}
+		}
+	}
+
+	private void Start()
+	{
+		Refresh();
+	}
 }

@@ -21,27 +21,33 @@ public class TrackerManager : MonoBehaviour
 			Debug.LogWarning("[TrackerManager] SaveService no está asignado.");
 		}
 	}
-	public void AddEntry(int minutes, string mode = "Listening", string mediaType = "", string title = "")
+	public void AddEntry(int minutes, string mode = "Listening", string mediaType = "",
+						 string title = "", int chars = 0, string dateOverride = null)
 	{
+		string dateIso = string.IsNullOrWhiteSpace(dateOverride)
+			? DateTime.Now.ToString("o")
+			: dateOverride;
+
 		var newEntry = new ImmersionEntry
 		{
 			entryId = Guid.NewGuid().ToString(),
-			dateIso = DateTime.Now.ToString("o"),
+			dateIso = dateIso,
 			minutes = minutes,
 			mode = mode,
 			mediaType = mediaType,
-			title = title
+			title = title,
+			chars = chars
 		};
 
 		Data.entries.Add(newEntry);
-		Debug.Log($"[TrackerManager] Añadida entrada de {minutes} min.");
+		Debug.Log($"[TrackerManager] Añadida entrada de {minutes} min, {chars} chars.");
 
 		if (saveService != null)
 			saveService.Save(Data);
 
-		Debug.Log("[TrackerManager] Lanzando evento OnEntryLogged...");
 		OnEntryLogged?.Invoke(newEntry);
 	}
+
 	public int GetTotalMinutes()
 	{
 		int total = 0;
@@ -49,6 +55,7 @@ public class TrackerManager : MonoBehaviour
 			total += entry.minutes;
 		return total;
 	}
+
 	public void ResetAllData()
 	{
 		Data = new TrackerData();
