@@ -112,7 +112,7 @@ MonoBehaviour:
       MessageSound: 
       MessageSoundPlayback: 0
       VoiceSource: {fileID: 0}
-      LinkedPrinter: YuinaIntroPrinter
+      LinkedPrinter: YuinaPrinter
       Poses: []
       Anchors: []
   AvatarLoader:

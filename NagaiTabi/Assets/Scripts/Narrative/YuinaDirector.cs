@@ -2,20 +2,8 @@ using UnityEngine;
 
 public class YuinaDirector : MonoBehaviour
 {
-	[SerializeField] private TrackerManager trackerManager;
 	[SerializeField] private NaninovelBridge naninovelBridge;
-
-	private void OnEnable()
-	{
-		if (trackerManager != null)
-			trackerManager.OnEntryLogged += HandleEntryLogged;
-	}
-	private void OnDisable()
-	{
-		if (trackerManager != null)
-			trackerManager.OnEntryLogged -= HandleEntryLogged;
-	}
-	private void HandleEntryLogged(ImmersionEntry entry)
+	public void PlayReactionFor(ImmersionEntry entry)
 	{
 		if (naninovelBridge == null || entry == null) return;
 

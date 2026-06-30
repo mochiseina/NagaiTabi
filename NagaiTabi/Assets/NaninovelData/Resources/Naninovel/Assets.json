@@ -1,6 +1,90 @@
 {
     "Assets": [
         {
+            "guid": "af9e91ac07f22f84bb22f27037291880",
+            "prefix": "Audio",
+            "path": "arr_fukusima",
+            "group": ""
+        },
+        {
+            "guid": "7ffdb6291df9ec34e8a291843bb3a047",
+            "prefix": "Audio",
+            "path": "arr_hakata",
+            "group": ""
+        },
+        {
+            "guid": "bbc6883b0ef83f448a7574d624546903",
+            "prefix": "Audio",
+            "path": "arr_hakodate",
+            "group": ""
+        },
+        {
+            "guid": "3981ac38b99f0a140a0049a9eb6020d9",
+            "prefix": "Audio",
+            "path": "arr_hirosima",
+            "group": ""
+        },
+        {
+            "guid": "224dd1e87aef34c499cd702d73c216a4",
+            "prefix": "Audio",
+            "path": "arr_kumamoto",
+            "group": ""
+        },
+        {
+            "guid": "b5905688f5cc2a6409e935fea04cf8a3",
+            "prefix": "Audio",
+            "path": "arr_ooarai",
+            "group": ""
+        },
+        {
+            "guid": "042e3772891c2d6488de486958c570af",
+            "prefix": "Audio",
+            "path": "arr_oosaka",
+            "group": ""
+        },
+        {
+            "guid": "1e2244c081d38f24d80282a75506ebe0",
+            "prefix": "Audio",
+            "path": "arr_sapporo",
+            "group": ""
+        },
+        {
+            "guid": "9592df90394ca034abfd855f4ae6ecf3",
+            "prefix": "Audio",
+            "path": "arr_sendai",
+            "group": ""
+        },
+        {
+            "guid": "f6c997da5357f014cad13e4498cc1a45",
+            "prefix": "Audio",
+            "path": "arr_takamatu",
+            "group": ""
+        },
+        {
+            "guid": "48e7f295f564e7d4594f1f34d1e9f78b",
+            "prefix": "Audio",
+            "path": "arr_tokyo",
+            "group": ""
+        },
+        {
+            "guid": "28f5bbeeae3e03d4a905a1e7d2e2fb95",
+            "prefix": "Audio",
+            "path": "arr_tugaru",
+            "group": ""
+        },
+        {
+            "guid": "a8ba11887a3628c4a87995d9dbdababe",
+            "prefix": "Audio",
+            "path": "arr_wakkanai",
+            "group": ""
+        },
+        {
+            "guid": "779c84be1ac37b740aa80240a1e9ecbc",
+            "prefix": "Audio",
+            "path": "arr_yamaguti",
+            "group": ""
+        },
+        {
             "guid": "23277b92f6901714f8ea3a661dac53b3",
             "prefix": "Audio",
             "path": "ItsukaItsuka",
@@ -10,6 +94,90 @@
             "guid": "d1d28a053c38b0e48aa5b889db0057d0",
             "prefix": "Audio",
             "path": "LaCancionDelPollo",
+            "group": ""
+        },
+        {
+            "guid": "efe90490838d2d142b0870fc79ffda82",
+            "prefix": "Audio",
+            "path": "mamo_fukusima",
+            "group": ""
+        },
+        {
+            "guid": "96de5fd4202b70d469178b6886aa19e1",
+            "prefix": "Audio",
+            "path": "mamo_hakata",
+            "group": ""
+        },
+        {
+            "guid": "acfbb0ef873894248917051179a558b8",
+            "prefix": "Audio",
+            "path": "mamo_hakodate",
+            "group": ""
+        },
+        {
+            "guid": "d886a88907faca547a05b9c71354ef84",
+            "prefix": "Audio",
+            "path": "mamo_hirosima",
+            "group": ""
+        },
+        {
+            "guid": "94704119a9afef84ebc68f1ed8032545",
+            "prefix": "Audio",
+            "path": "mamo_kumamoto",
+            "group": ""
+        },
+        {
+            "guid": "ebe91d5205a88174dae1bbd0009ebe76",
+            "prefix": "Audio",
+            "path": "mamo_ooarai",
+            "group": ""
+        },
+        {
+            "guid": "86e97e489582b46418b4695d36a5f525",
+            "prefix": "Audio",
+            "path": "mamo_oosaka",
+            "group": ""
+        },
+        {
+            "guid": "afa3475fdf5c1ab4cb9a2f1cdf904451",
+            "prefix": "Audio",
+            "path": "mamo_sapporo",
+            "group": ""
+        },
+        {
+            "guid": "344e8b68ad2728b469843301ea5461cf",
+            "prefix": "Audio",
+            "path": "mamo_sendai",
+            "group": ""
+        },
+        {
+            "guid": "ad98c59b72daf554cabdaab3315c870d",
+            "prefix": "Audio",
+            "path": "mamo_takamatu",
+            "group": ""
+        },
+        {
+            "guid": "b9a53015daf3a914d8aba0679833d32d",
+            "prefix": "Audio",
+            "path": "mamo_tokyo",
+            "group": ""
+        },
+        {
+            "guid": "0f4b9a59bd80d554f91a7fcf823880fd",
+            "prefix": "Audio",
+            "path": "mamo_tugaru",
+            "group": ""
+        },
+        {
+            "guid": "a08e6875542a595418e8d02ec3e1367e",
+            "prefix": "Audio",
+            "path": "mamo_wakkanai",
+            "group": ""
+        },
+        {
+            "guid": "53d6c15b40218c846b6b702df5be605d",
+            "prefix": "Audio",
+            "path": "mamo_yamaguti",
             "group": ""
         },
         {
@@ -70,6 +238,18 @@
             "guid": "f651b681a43926243bcc057f125c7dd9",
             "prefix": "Fonts",
             "path": "NotoSansJP-VariableFont_wght SDF",
+            "group": ""
+        },
+        {
+            "guid": "52cb9571bfc58384bbe01f87be7612ef",
+            "prefix": "Scripts",
+            "path": "Approaching",
+            "group": ""
+        },
+        {
+            "guid": "61f498c90e892794c9faefbcf55fe80f",
+            "prefix": "Scripts",
+            "path": "Arrivals",
             "group": ""
         },
         {

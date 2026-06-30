@@ -331,7 +331,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 2}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2292339725607531099
@@ -362,12 +362,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Enter hours...
-
-'
+  m_text: Enter hours...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 625c73a5f67085545b9929d264443c28, type: 2}
+  m_sharedMaterial: {fileID: 4698768318645150817, guid: 625c73a5f67085545b9929d264443c28, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -391,8 +389,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 15
+  m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -820,19 +818,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7971687767288514056}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1148211131502741433}
-        m_TargetAssemblyTypeName: LogInputPanel, Assembly-CSharp
-        m_MethodName: SetMediaType
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Audio
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &268158498316753158
 GameObject:
   m_ObjectHideFlags: 0
@@ -1489,7 +1475,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 2}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8235228300772703016
@@ -1524,8 +1510,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 625c73a5f67085545b9929d264443c28, type: 2}
+  m_sharedMaterial: {fileID: 4698768318645150817, guid: 625c73a5f67085545b9929d264443c28, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2336,19 +2322,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7013684562699136073}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1148211131502741433}
-        m_TargetAssemblyTypeName: LogInputPanel, Assembly-CSharp
-        m_MethodName: SetMediaType
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Manga
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1554092551414256795
 GameObject:
   m_ObjectHideFlags: 0
@@ -2882,6 +2856,7 @@ MonoBehaviour:
   statsPanelView: {fileID: 7496400148173882298}
   stationSignView: {fileID: 2255564027321181537}
   journeyMapView: {fileID: 3209653635317464377}
+  stationAnnouncer: {fileID: 5592473141590768173}
 --- !u!1 &1999688730623174891
 GameObject:
   m_ObjectHideFlags: 0
@@ -4387,7 +4362,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 4}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8512681399668507149
@@ -4418,10 +4393,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enter title
+  m_text: Enter title...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 625c73a5f67085545b9929d264443c28, type: 2}
+  m_sharedMaterial: {fileID: 4698768318645150817, guid: 625c73a5f67085545b9929d264443c28, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4445,8 +4420,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 15
+  m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5258,7 +5233,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000032824795, y: -0.00061035156}
+  m_AnchoredPosition: {x: 0.00082005846, y: -0.00079345703}
   m_SizeDelta: {x: -5.407776, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2142438407414856814
@@ -6468,6 +6443,7 @@ GameObject:
   - component: {fileID: 5705171634518307014}
   - component: {fileID: 7387822791594051312}
   - component: {fileID: 7908363895172277617}
+  - component: {fileID: 5207936690220333180}
   m_Layer: 5
   m_Name: Anime
   m_TagString: Untagged
@@ -6576,19 +6552,104 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7387822791594051312}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1148211131502741433}
-        m_TargetAssemblyTypeName: LogInputPanel, Assembly-CSharp
-        m_MethodName: SetMediaType
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Anime
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!82 &5207936690220333180
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5055873195397715514}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &5062058867427234776
 GameObject:
   m_ObjectHideFlags: 0
@@ -6820,19 +6881,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4427042437158777333}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1148211131502741433}
-        m_TargetAssemblyTypeName: LogInputPanel, Assembly-CSharp
-        m_MethodName: SetMediaType
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Visual Novel
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &5398965202160796545
 GameObject:
   m_ObjectHideFlags: 0
@@ -6978,8 +7027,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u200B"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 625c73a5f67085545b9929d264443c28, type: 2}
+  m_sharedMaterial: {fileID: 4698768318645150817, guid: 625c73a5f67085545b9929d264443c28, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7158,7 +7207,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 3.7}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4541804063719750438
@@ -7193,8 +7242,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 625c73a5f67085545b9929d264443c28, type: 2}
+  m_sharedMaterial: {fileID: 4698768318645150817, guid: 625c73a5f67085545b9929d264443c28, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7218,8 +7267,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 15
+  m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7424,6 +7473,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6257184311073219112}
+  - component: {fileID: 5707905968498180698}
   m_Layer: 5
   m_Name: ContentTypeController
   m_TagString: Untagged
@@ -7456,6 +7506,49 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5707905968498180698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6012588175821393099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78fe83fd125d02746ae133fd00df1bd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MediaButtonGroup
+  buttons:
+  - button: {fileID: 7908363895172277617}
+    mediaType: Anime
+    image: {fileID: 0}
+    baseScale: {x: 0, y: 0, z: 0}
+  - button: {fileID: 4855577047290347599}
+    mediaType: Manga
+    image: {fileID: 0}
+    baseScale: {x: 0, y: 0, z: 0}
+  - button: {fileID: 6270555764260734707}
+    mediaType: Text
+    image: {fileID: 0}
+    baseScale: {x: 0, y: 0, z: 0}
+  - button: {fileID: 2171506415467568498}
+    mediaType: Visual Novel
+    image: {fileID: 0}
+    baseScale: {x: 0, y: 0, z: 0}
+  - button: {fileID: 193219593931707825}
+    mediaType: Video
+    image: {fileID: 0}
+    baseScale: {x: 0, y: 0, z: 0}
+  - button: {fileID: 1931878705971674918}
+    mediaType: Audio
+    image: {fileID: 0}
+    baseScale: {x: 0, y: 0, z: 0}
+  logInputPanel: {fileID: 1148211131502741433}
+  selectedColor: {r: 1, g: 0.68490565, b: 0.89893204, a: 1}
+  deselectedColor: {r: 0.7735849, g: 0.43641865, b: 0.7735849, a: 1}
+  selectedScale: 1.1
+  audioSource: {fileID: 5207936690220333180}
+  clickSound: {fileID: 8300000, guid: 970e9abcd4189f04da096b0176e9e3d3, type: 3}
 --- !u!1 &6106140954158350243
 GameObject:
   m_ObjectHideFlags: 0
@@ -7797,8 +7890,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u200B"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 625c73a5f67085545b9929d264443c28, type: 2}
+  m_sharedMaterial: {fileID: 4698768318645150817, guid: 625c73a5f67085545b9929d264443c28, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8259,8 +8352,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LeverLogControl
   leverArm: {fileID: 3892868447752017379}
-  pullAngle: 150
-  pullDuration: 0.2
+  pullAngle: 135
+  pullDuration: 0.15
   returnDuration: 1
   audioSource: {fileID: 4707547340359097172}
   pullSound: {fileID: 8300000, guid: 2c212c28ef9731f4bbc617d34f0d3356, type: 3}
@@ -8395,6 +8488,7 @@ GameObject:
   - component: {fileID: 5580111285920372616}
   - component: {fileID: 3110686018760565317}
   - component: {fileID: 7482746430545373449}
+  - component: {fileID: 5592473141590768173}
   m_Layer: 0
   m_Name: Systems
   m_TagString: Untagged
@@ -8466,7 +8560,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f3a352362c2e8448b84db414634b588, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::YuinaDirector
-  trackerManager: {fileID: 5470753887255910104}
   naninovelBridge: {fileID: 5580111285920372616}
 --- !u!114 &7482746430545373449
 MonoBehaviour:
@@ -8484,6 +8577,23 @@ MonoBehaviour:
   statsPanel: {fileID: 8422821496767744674}
   guidePanel: {fileID: 192762221236850249}
   playerProfileView: {fileID: 2328075701741986788}
+--- !u!114 &5592473141590768173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6900244598569672443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d2ce0a36403a2247baaca561bef823e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StationAnnouncer
+  trackerManager: {fileID: 5470753887255910104}
+  yuinaDirector: {fileID: 3110686018760565317}
+  arrivalsScriptRef: 61f498c90e892794c9faefbcf55fe80f
+  approachingScriptRef: 52cb9571bfc58384bbe01f87be7612ef
+  approachRatio: 0.1
 --- !u!1 &6902385093619397407
 GameObject:
   m_ObjectHideFlags: 0
@@ -9201,7 +9311,7 @@ MonoBehaviour:
   m_CaretWidth: 1
   m_ReadOnly: 0
   m_RichText: 1
-  m_GlobalFontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_GlobalFontAsset: {fileID: 11400000, guid: 625c73a5f67085545b9929d264443c28, type: 2}
   m_OnFocusSelectAll: 1
   m_ResetOnDeActivation: 1
   m_KeepTextSelectionVisible: 0
@@ -9481,19 +9591,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8022905149234089191}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1148211131502741433}
-        m_TargetAssemblyTypeName: LogInputPanel, Assembly-CSharp
-        m_MethodName: SetMediaType
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Text
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &7691813788797004241
 GameObject:
   m_ObjectHideFlags: 0
@@ -11808,19 +11906,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7931614881012760643}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1148211131502741433}
-        m_TargetAssemblyTypeName: LogInputPanel, Assembly-CSharp
-        m_MethodName: SetMediaType
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Video
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &9090292331849885857
 GameObject:
   m_ObjectHideFlags: 0

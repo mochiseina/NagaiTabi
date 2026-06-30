@@ -319,8 +319,8 @@ MonoBehaviour:
     neque id felis posuere suscipit. Proin fringilla pharetra viverra. Lorem ipsum
     dolor sit amet, consectetur adipiscing elit.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5a5da223be1edb84887b02e14312351e, type: 2}
-  m_sharedMaterial: {fileID: -8572479452236383033, guid: 5a5da223be1edb84887b02e14312351e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 625c73a5f67085545b9929d264443c28, type: 2}
+  m_sharedMaterial: {fileID: 4698768318645150817, guid: 625c73a5f67085545b9929d264443c28, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -613,7 +613,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -377, y: 49.931}
+  m_AnchoredPosition: {x: -342, y: 49.931}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &114488557935533276

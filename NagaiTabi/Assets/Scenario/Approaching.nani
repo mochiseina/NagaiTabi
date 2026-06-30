@@ -1,0 +1,60 @@
+; Approaching.nani — MAMONAKU: solo audio de megafonía, sin texto ni cuadro.
+
+# Station01
+@sfx mamo_kumamoto wait:false
+@stop
+
+# Station02
+@sfx mamo_hakata wait:false
+@stop
+
+# Station03
+@sfx mamo_yamaguti wait:false
+@stop
+
+# Station04
+@sfx mamo_hirosima wait:false
+@stop
+
+# Station05
+@sfx mamo_takamatu wait:false
+@stop
+
+# Station06
+@sfx mamo_oosaka wait:false
+@stop
+
+# Station07
+@sfx mamo_tokyo wait:false
+@stop
+
+# Station08
+@sfx mamo_ooarai wait:false
+@stop
+
+# Station09
+@sfx mamo_fukusima wait:false
+@stop
+
+# Station10
+@sfx mamo_sendai wait:false
+@stop
+
+# Station11
+@sfx mamo_tugaru wait:false
+@stop
+
+# Station12
+@sfx mamo_hakodate wait:false
+@stop
+
+# Station13
+@sfx mamo_sapporo wait:false
+@stop
+
+# Station14
+@sfx mamo_wakkanai wait:false
+@stop
+
+# End
+@stop

@@ -35,7 +35,7 @@ namespace NagaiTabi.Journey
 			new Station("Yamaguchi",   "山口",     50f),
 			new Station("Hiroshima",   "広島",     75f),
 			new Station("Takamatsu",   "高松",    120f),
-			new Station("Kyoto",       "京都",    200f),
+			new Station("Osaka",      "大阪",    200f),
 			new Station("Tokyo",       "東京",    300f),
 			new Station("Oarai",       "大洗",    450f),
 			new Station("Fukushima",   "福島",    600f),

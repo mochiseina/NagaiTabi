@@ -1,0 +1,89 @@
+; Arrivals.nani — LLEGADA: @sfx del anuncio (sin cuadro) + Yuina felicita en su printer.
+; El @sfx con wait:false deja que el audio suene mientras Yuina habla a la vez.
+
+# Station01
+@sfx arr_kumamoto wait:false
+@printer YuinaPrinter
+Yuina: First stop! See? The train really does move when you put the hours in. No turning back now.
+@stop
+
+# Station02
+@sfx arr_hakata wait:false
+@printer YuinaPrinter
+Yuina: Fukuoka already? You're sticking with this better than most people do. I'm a little impressed.
+@stop
+
+# Station03
+@sfx arr_yamaguti wait:false
+@printer YuinaPrinter
+Yuina: Fifty hours in. Honestly? I figured you'd have wandered off by now. Glad you proved me wrong.
+@stop
+
+# Station04
+@sfx arr_hirosima wait:false
+@printer YuinaPrinter
+Yuina: Hiroshima. You're starting to get a feel for the rhythm of this, aren't you? Keep that momentum.
+@stop
+
+# Station05
+@sfx arr_takamatu wait:false
+@printer YuinaPrinter
+Yuina: Things get a little steeper from here. But don't worry — I'm riding right alongside you.
+@stop
+
+# Station06
+@sfx arr_oosaka wait:false
+@printer YuinaPrinter
+Yuina: Two hundred hours. I shouldn't underestimate anyone who makes it this far. You've earned this stop.
+@stop
+
+# Station07
+@sfx arr_tokyo wait:false
+@printer YuinaPrinter
+Yuina: Tokyo — the liveliest station on the line. Your Japanese is getting livelier too, you know.
+@stop
+
+# Station08
+@sfx arr_ooarai wait:false
+@printer YuinaPrinter
+Yuina: By now this isn't really "studying" anymore, is it? It's just part of your days. I love that.
+@stop
+
+# Station09
+@sfx arr_fukusima wait:false
+@printer YuinaPrinter
+Yuina: I'll be honest with you. Not many people make it this far without giving up. You're something else.
+@stop
+
+# Station10
+@sfx arr_sendai wait:false
+@printer YuinaPrinter
+Yuina: Eight hundred hours. The number alone is dizzying… but you got here one step at a time, didn't you?
+@stop
+
+# Station11
+@sfx arr_tugaru wait:false
+@printer YuinaPrinter
+Yuina: A thousand hours. We crossed that line together. I'm feeling a little sentimental, honestly.
+@stop
+
+# Station12
+@sfx arr_hakodate wait:false
+@printer YuinaPrinter
+Yuina: Lately your Japanese has this… ease to it. Less "thinking before speaking." It makes me happy.
+@stop
+
+# Station13
+@sfx arr_sapporo wait:false
+@printer YuinaPrinter
+Yuina: Not much track left now. Part of me will miss this — but that's just proof of how far you've come.
+@stop
+
+# Station14
+@sfx arr_wakkanai wait:false
+@printer YuinaPrinter
+Yuina: Wakkanai. The final stop. …I didn't think we'd actually make it, back at the start. I'm so glad we traveled this together. Thank you.
+@stop
+
+# End
+@stop
