@@ -11,6 +11,8 @@ public class StatsPanelView : MonoBehaviour
 	[SerializeField] private TextMeshProUGUI totalLogsText;
 	[SerializeField] private TextMeshProUGUI totalHoursText;
 	[SerializeField] private TextMeshProUGUI totalListenedText;
+	[Tooltip("Recuadro morado: racha actual.")]
+	[SerializeField] private TextMeshProUGUI streakText;
 
 	public void Refresh()
 	{
@@ -36,6 +38,13 @@ public class StatsPanelView : MonoBehaviour
 
 		if (totalListenedText != null)
 			totalListenedText.text = $"Total Listened: {stats.totalListeningHours:0.0} h";
+
+		if (streakText != null)
+		{
+			// "day" en singular si es 1, "days" si no.
+			string unit = stats.currentStreak == 1 ? "day" : "days";
+			streakText.text = $"Streak: {stats.currentStreak} {unit}";
+		}
 	}
 
 	private void Start()

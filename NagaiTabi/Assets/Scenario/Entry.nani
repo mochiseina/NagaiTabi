@@ -2,7 +2,7 @@
 @stopBgm fade:0.5
 
 @processInput set:Pause.false,Rollback.false
-@bgm ItsukaItsuka
+@bgm LaCancionDelPollo
 @back TrainInterior
 @char Yuina.Neutral scale:0.5
 

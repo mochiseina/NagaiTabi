@@ -204,6 +204,7 @@ GameObject:
   - component: {fileID: 114888314837608326}
   - component: {fileID: 114894406141552424}
   - component: {fileID: 114026045080486480}
+  - component: {fileID: 2256467806178646134}
   m_Layer: 5
   m_Name: ContinueButton
   m_TagString: Untagged
@@ -276,7 +277,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1471200193755478}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 85721b7db1f80f349b9a4e778772c293, type: 3}
   m_Name: 
@@ -337,7 +338,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114888314837608326}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2256467806178646134}
+        m_TargetAssemblyTypeName: Naninovel.PlayScript, Elringus.Naninovel.Runtime
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   labelText: {fileID: 7075620687250686336}
   labelColors:
     m_NormalColor: {r: 0.87058824, g: 0.87058824, b: 0.87058824, a: 1}
@@ -347,6 +360,26 @@ MonoBehaviour:
     m_DisabledColor: {r: 0.6, g: 0.6, b: 0.6, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
+--- !u!114 &2256467806178646134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471200193755478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5975c9748a52c8d43b34c8d7c428cacd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Elringus.Naninovel.Runtime::Naninovel.PlayScript
+  scriptText: 
+  gotoScript: c236fabe25828f84a97d93bcbf380737
+  gotoLabel: 
+  playOnAwake: 0
+  completeOnContinue: 2
+  disableAwaitInput: 1
+  disableAutoPlay: 0
+  disableSkip: 0
 --- !u!1 &1520790054547676
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,7 +1,9 @@
 @showUI TrackerUI
+@hideUI TitleUI
+@stopBgm fade:0.5
+@bgm ItsukaItsuka
 @activatetimeofday
 @back Day
 @char Yuina.Neutral pos:27,0 scale:0.5 visible:true tint:#FFFFFFFF wait:false
-@bgm Nocheviento
 @printer YuinaPrinter tint:#FFFFFFFF
 @stop

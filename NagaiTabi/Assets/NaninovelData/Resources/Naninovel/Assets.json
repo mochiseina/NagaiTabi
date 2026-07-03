@@ -181,6 +181,12 @@
             "group": ""
         },
         {
+            "guid": "f14d60b2e2f6260458870b5d4ae76479",
+            "prefix": "Audio",
+            "path": "NagaiTabi",
+            "group": ""
+        },
+        {
             "guid": "08322705d87f2b3458589e6467166197",
             "prefix": "Backgrounds/MainBackground",
             "path": "Day",
