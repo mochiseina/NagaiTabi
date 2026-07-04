@@ -539,7 +539,7 @@ RectTransform:
   - {fileID: 8568262152931684306}
   - {fileID: 9014172134063426219}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.8, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -684,6 +684,7 @@ GameObject:
   - component: {fileID: 114475420713909690}
   - component: {fileID: 114514801246507618}
   - component: {fileID: 114343483525403042}
+  - component: {fileID: 5069236675165332272}
   m_Layer: 5
   m_Name: NewGameButton
   m_TagString: Untagged
@@ -756,7 +757,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1561638094064900}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e09a149c1d9919f43a983630210e36b3, type: 3}
   m_Name: 
@@ -828,6 +829,19 @@ MonoBehaviour:
     m_DisabledColor: {r: 0.6, g: 0.6, b: 0.6, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
+--- !u!114 &5069236675165332272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1561638094064900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00dd71f0f5e088d4d967456c669b0be2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewGameButton
+  entryScript: 307bd813e0993ef4786b4137608d716a
 --- !u!1 &1592858419531552
 GameObject:
   m_ObjectHideFlags: 0

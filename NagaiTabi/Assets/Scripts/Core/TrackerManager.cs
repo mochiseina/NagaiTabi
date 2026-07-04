@@ -14,13 +14,14 @@ public class TrackerManager : MonoBehaviour
 		if (saveService != null)
 		{
 			Data = saveService.Load();
-			Debug.Log($"[TrackerManager] Datos cargados. Entradas: {Data.entries.Count}");
+			Debug.Log($"[TrackerManager] Datos cargados. Entradas: {Data.entries.Count}, nombre: '{Data.playerName}'");
 		}
 		else
 		{
 			Debug.LogWarning("[TrackerManager] SaveService no está asignado.");
 		}
 	}
+
 	public void AddEntry(int minutes, string mode = "Listening", string mediaType = "",
 						 string title = "", int chars = 0, string dateOverride = null)
 	{
@@ -42,10 +43,28 @@ public class TrackerManager : MonoBehaviour
 		Data.entries.Add(newEntry);
 		Debug.Log($"[TrackerManager] Añadida entrada de {minutes} min, {chars} chars.");
 
-		if (saveService != null)
-			saveService.Save(Data);
+		Save();
 
 		OnEntryLogged?.Invoke(newEntry);
+	}
+
+	public void Save()
+	{
+		if (saveService != null)
+			saveService.Save(Data);
+	}
+
+	public void SetPlayerName(string playerName)
+	{
+		Data.playerName = playerName;
+		Save();
+		Debug.Log($"[TrackerManager] Nombre guardado en JSON: '{playerName}'");
+	}
+	public bool HasExistingProfile()
+	{
+		bool hasName = !string.IsNullOrWhiteSpace(Data.playerName);
+		bool hasLogs = Data.entries != null && Data.entries.Count > 0;
+		return hasName || hasLogs;
 	}
 
 	public int GetTotalMinutes()
@@ -59,10 +78,7 @@ public class TrackerManager : MonoBehaviour
 	public void ResetAllData()
 	{
 		Data = new TrackerData();
-
-		if (saveService != null)
-			saveService.Save(Data);
-
+		Save();
 		Debug.Log("[TrackerManager] Datos reseteados.");
 	}
 }

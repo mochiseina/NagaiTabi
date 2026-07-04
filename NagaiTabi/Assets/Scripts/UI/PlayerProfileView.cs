@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Naninovel;
 using TMPro;
@@ -18,41 +19,59 @@ public class PlayerProfileView : MonoBehaviour
 
 	public void RefreshFromNaninovel()
 	{
-		if (!Engine.Initialized)
+		if (trackerManager == null)
 		{
-			Debug.LogWarning("[PlayerProfileView] Engine aún no inicializado.");
+			Debug.LogWarning("[PlayerProfileView] Falta trackerManager.");
 			return;
 		}
+		string name = trackerManager.Data != null ? trackerManager.Data.playerName : "";
 
-		var vars = Engine.GetService<ICustomVariableManager>();
-		var value = vars.GetVariableValue("PlayerName").String;
-
-		Debug.Log($"[PlayerProfileView] PlayerName leído desde Naninovel: '{value}'");
-
-		if (string.IsNullOrWhiteSpace(value))
-			value = "Sin nombre";
-
-		if (trackerManager != null)
+		if (string.IsNullOrWhiteSpace(name) && Engine.Initialized)
 		{
-			trackerManager.Data.playerName = value;
-
-			// opcional pero útil: guardar el nombre también en tu JSON
-			var saveService = trackerManager.GetComponent<SaveService>();
+			string fromNani = TryReadNaninovelName();
+			if (!string.IsNullOrWhiteSpace(fromNani))
+			{
+				name = fromNani;
+				trackerManager.SetPlayerName(name); // persiste al JSON
+				Debug.Log($"[PlayerProfileView] Nombre capturado de la intro y guardado: '{name}'");
+			}
 		}
 
+		if (string.IsNullOrWhiteSpace(name))
+			name = "Sin nombre";
+
 		if (playerNameText != null)
-			playerNameText.text = value;
+			playerNameText.text = name;
+	}
+
+	/// <summary>Lee PlayerName de Naninovel de forma segura; "" si no existe.</summary>
+	private string TryReadNaninovelName()
+	{
+		try
+		{
+			var vars = Engine.GetService<ICustomVariableManager>();
+			return vars.GetVariableValue("PlayerName").String;
+		}
+		catch (Exception)
+		{
+			return "";
+		}
 	}
 
 	public void ResetPlayerNameForTesting()
 	{
-		if (!Engine.Initialized) return;
-
-		var vars = Engine.GetService<ICustomVariableManager>();
-		vars.SetVariableValue("PlayerName", new(""));
+		try
+		{
+			if (Engine.Initialized)
+			{
+				var vars = Engine.GetService<ICustomVariableManager>();
+				vars.SetVariableValue("PlayerName", new(""));
+			}
+		}
+		catch (Exception) { /* si no existe, nada que limpiar */ }
 
 		if (trackerManager != null)
-			trackerManager.Data.playerName = "";
+			trackerManager.SetPlayerName("");
 
 		if (playerNameText != null)
 			playerNameText.text = "Sin nombre";

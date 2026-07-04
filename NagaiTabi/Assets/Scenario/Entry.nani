@@ -1,4 +1,6 @@
 ; Entry.nani
+
+@hideUI TitleUI
 @stopBgm fade:0.5
 
 @processInput set:Pause.false,Rollback.false
