@@ -1,52 +1,148 @@
-; Entry.nani
+; Entry.nani — Intro VN de NagaiTabi.
+; Apertura narrada (3ª persona) -> Yuina te habla -> nombre -> invitación Yes/No.
 
 @hideUI TitleUI
 @stopBgm fade:0.5
-
 @processInput set:Pause.false,Rollback.false
-@bgm LaCancionDelPollo
-@back TrainInterior
-@char Yuina.Neutral scale:0.5
 
+; --- 1. Negro inicial ---
+@back OkinawaSunset tint:black time:0
+@sfx OceanSound Time:2 volume:0.4 loop!
+@sfx CricketsFireflies Time:2 volume:0.4 loop!
 @showPrinter YuinaIntroPrinter
 @printer YuinaIntroPrinter default! !hideOther
 
-Yuina: Ah... ya estás aquí.[-] Bienvenido a este largo viaje.
-Yuina: La verdad es que vengo a soltarte un tochaco de texto inútil para demostrar que esto furula, pero bueno.
+; --- 2. Narración sobre negro ---
+Okinawa. The southern edge of the line, where the journey of learning Japanese is said to begin.
+Somewhere far off, the sea breathed calmly against the shore. The busy platform was unusually quiet.
 
-Yuina: Ejem... entonces, [-]este tren puede llevarte lejos. Muy lejos.
-Yuina: Más lejos de lo que imaginas ahora mismo.
+; --- 3. Fundido al atardecer ---
+@back OkinawaSunset tint:white time:3 wait!
+@bgm LaCancionDelPollo
 
-Yuina: Pero no va a moverse solo.
-Yuina: Cada paso, cada sesión, cada pequeño avance... [-]tendrás que dárselos tú.
+; --- 4. La escena ---
+The train sat still on the tracks. Out of service, it seemed.
+And yet... it was here. Waiting. As if it knew someone was still coming.
 
-Yuina: No hace falta correr. [-]No hace falta que seas perfecto.
-Yuina: Sólo hace falta que sigas avanzando.
+; --- 5. Ella (el CG close-up baja desde arriba a la derecha, fondo detrás) ---
+A beautiful, elegant train driver was there, by the wagon's window, watching the sunset by the seashore railroad.
 
-@char Yuina.Hehe scale:0.5
-Yuina: Yo estaré aquí para acompañarte durante el trayecto. [-]Para recordarte por qué esto funciona.
-Yuina: Y para que no olvides cuánto has recorrido ya.
+; CG fuera de pantalla (derecha, arriba, invisible), luego baja con fundido.
+@char YuinaCG.Look pos:30,110 scale:0.82 tint:#ffffff00 time:2 wait!
+@char YuinaCG.Look pos:30,-20 tint:#ffffffff time:2 easing:EaseOutQuad wait!
+
+Her expression was as delicate as the sound of the sea. The wind caressed her hair as if they were acquainted since forever.
+
+; --- 6. El CG se retira (sube y se desvanece) y entra Yuina normal ---
+@char YuinaCG.Look pos:30,110 tint:#ffffff00 time:0.8 wait!
+@hide YuinaCG time:0
+
 
 @char Yuina.Neutral scale:0.5
-Yuina: Antes de partir... [-]dime cómo quieres que te llame.
 
-@input PlayerName summary:"Escribe tu nombre." type:string
+@set noCount=0
+@stopSfx OceanSound
+@stopSfx CricketsFireflies
+
+; ================= YUINA HABLA =================
+@showPrinter YuinaIntroPrinter
+@printer YuinaIntroPrinter default! !hideOther
+Yuina: Oh.[-] So it's you...
+@char Yuina.Hehe scale:0.5
+Yuina: Will you go to Wakkanai with me?[-] You might have no idea what that means yet... hehe~
+
+@char Yuina.Neutral scale:0.5
+Yuina: You've decided to set off on an adventure, haven't you?[-] So I'm taking you with me, all the way to Wakkanai.
+Yuina: We're in Okinawa right now. The very beginning of the line.
+
+@char Yuina.Serious scale:0.5
+Yuina: You see, learning a language is a very long... [-]long journey.
+Yuina: This train moves when you move.[-] As long as you log your journey and your hours, it all turns into energy.
+
+; --- El corazón del concepto: por qué te necesita ---
+@char Yuina.Worry scale:0.5
+Yuina: I... can't move it on my own, you see.[-] I already know Japanese.
+Yuina: There's nothing left for me to learn, so there's no energy in me to give this train.
+@char Yuina.Serious scale:0.5
+Yuina: But you? You still have a whole horizon ahead of you.[-] Every word you learn pushes us forward.
+
+@char Yuina.Hehe scale:0.5
+Yuina: We'll travel across the whole of Japan together, from now on.
+@char Yuina.Decided scale:0.5
+Yuina: And I'll make sure this becomes the journey of our lives.
+
+; --- Nombre ---
+@char Yuina.Neutral scale:0.5
+Yuina: But first...[-] tell me what you'd like me to call you.
+
+@input PlayerName summary:"Type your name." type:string
+@savePlayerName
 
 Yuina: {PlayerName}...
-Yuina: Sí. Creo que ese nombre le queda bien a este viaje.
-
-Yuina: Escúchame bien, {PlayerName}.
-Yuina: Puede que a veces sientas que no avanzas.
-Yuina: Puede que el camino parezca largo, pesado, incluso silencioso.
-
 @char Yuina.Hehe scale:0.5
-Yuina: Pero incluso los viajes enormes [-]empiezan con una sola entrada en el registro.
+Yuina: Yes. That name suits this journey well.
 
-Yuina: Cuando estés listo, [-]te enseñaré el panel de operaciones.
+; --- Por qué se siente cerca de ti ---
+@char Yuina.Serious scale:0.5
+Yuina: You know, {PlayerName}... to learn someone's language[-] is to reach the heart of who they are.
+Yuina: It's an intimate thing. Maybe we'll get along if you try hard enough...
+Yuina: Just kidding, but it is most certainly a human thing ~
 
+; --- Aviso de que será duro ---
+@char Yuina.Worry scale:0.5
+Yuina: There will be times you feel like you're not moving at all.[-] The road may feel long, heavy... even silent.
+@char Yuina.Decided scale:0.5
+Yuina: But even the greatest journeys[-] begin with a single entry in the log.
+
+; --- Invitación / elección ---
 @char Yuina.Neutral scale:0.5
-Yuina: Desde ahí empezará tu travesía de verdad. [-]Descuida, te acostumbrarás pronto.
+Yuina: So then, {PlayerName}.[-] Will you go on with me?
 
+# Ask
+@choice "Yes, let's go." goto:#Yes
+@choice "No." goto:#No
+@stop
+
+# Yes
+@char Yuina.Hehe scale:0.5
+Yuina: Hehe~ I knew you would.
+@char Yuina.Neutral scale:0.5
+Yuina: Then let me show you the operations panel.[-] From there, your real journey begins.
+Yuina: Don't worry. You'll get used to it before you know it.
 @wait 0.4
 @hideAll
 @goto MainTracker
+
+; --- Bucle del "No" ---
+# No
+@set noCount=noCount+1
+@goto #NoThird if:noCount>=3
+@goto #NoFirst if:noCount==1
+@goto #NoSecond if:noCount==2
+
+# NoFirst
+@char Yuina.Worry scale:0.5
+Yuina: ...Eh?
+@char Yuina.Hehe scale:0.5
+Yuina: No? Come on, you don't mean that.[-] Let me ask you again.
+@char Yuina.Neutral scale:0.5
+Yuina: Will you go on with me?
+@goto #Ask
+
+# NoSecond
+@char Yuina.Serious scale:0.5
+Yuina: ...You're really going to keep saying no?
+Yuina: I'll give you one more chance. Choose wisely.
+Yuina: Will you go on with me?
+@goto #Ask
+
+# NoThird
+@char Yuina.Angry scale:0.5
+Yuina: Hmph.
+@char Yuina.Hehe scale:0.5
+Yuina: Fine, fine. I can take a hint.
+@char Yuina.Neutral scale:0.5
+Yuina: Off you go, then. The train leaves without you.[-] ...Farewell.
+@wait 1.5
+@quitGame
+@stop

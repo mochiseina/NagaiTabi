@@ -85,6 +85,12 @@
             "group": ""
         },
         {
+            "guid": "a84e7c8a8bf7420438349c79758f0ede",
+            "prefix": "Audio",
+            "path": "CricketsFireflies",
+            "group": ""
+        },
+        {
             "guid": "23277b92f6901714f8ea3a661dac53b3",
             "prefix": "Audio",
             "path": "ItsukaItsuka",
@@ -187,6 +193,12 @@
             "group": ""
         },
         {
+            "guid": "e03c349579d55144ca60684d1ed16932",
+            "prefix": "Audio",
+            "path": "OceanSound",
+            "group": ""
+        },
+        {
             "guid": "08322705d87f2b3458589e6467166197",
             "prefix": "Backgrounds/MainBackground",
             "path": "Day",
@@ -199,10 +211,34 @@
             "group": "Backgrounds/cb3b6c32-610b-45ee-869f-1f2624ae8547"
         },
         {
+            "guid": "f5bdd612949aa464985c35f50f88dad5",
+            "prefix": "Backgrounds/MainBackground",
+            "path": "OkinawaSunset",
+            "group": "Backgrounds/cb3b6c32-610b-45ee-869f-1f2624ae8547"
+        },
+        {
             "guid": "06966371941027a43b450bf1cb4dde56",
             "prefix": "Backgrounds/MainBackground",
             "path": "Sunset",
             "group": "Backgrounds/cb3b6c32-610b-45ee-869f-1f2624ae8547"
+        },
+        {
+            "guid": "10165f70632b3824b8699d29ca877263",
+            "prefix": "Characters/Yuina",
+            "path": "Angry",
+            "group": "Characters/f6292e0c-82f6-4e23-a331-72e090f1b412"
+        },
+        {
+            "guid": "6cf23702371055e43a8e9bb068dae10a",
+            "prefix": "Characters/Yuina",
+            "path": "Announce",
+            "group": "Characters/f6292e0c-82f6-4e23-a331-72e090f1b412"
+        },
+        {
+            "guid": "5806d9b60e2dfbe4d94c0d883f607ef5",
+            "prefix": "Characters/Yuina",
+            "path": "Decided",
+            "group": "Characters/f6292e0c-82f6-4e23-a331-72e090f1b412"
         },
         {
             "guid": "ce2c691bed67a5245a2e4f1f5e939598",
@@ -217,10 +253,28 @@
             "group": "Characters/f6292e0c-82f6-4e23-a331-72e090f1b412"
         },
         {
-            "guid": "063b2f8d0ed22c543a82c0ad03561fe0",
+            "guid": "0922264b624486b4a969e0727b9a1c51",
+            "prefix": "Characters/Yuina",
+            "path": "Serious",
+            "group": "Characters/f6292e0c-82f6-4e23-a331-72e090f1b412"
+        },
+        {
+            "guid": "10165f70632b3824b8699d29ca877263",
             "prefix": "Characters/Yuina",
             "path": "Wink",
             "group": "Characters/f6292e0c-82f6-4e23-a331-72e090f1b412"
+        },
+        {
+            "guid": "f1f000c8e0aaa5449a556a36374b7987",
+            "prefix": "Characters/Yuina",
+            "path": "Worry",
+            "group": "Characters/f6292e0c-82f6-4e23-a331-72e090f1b412"
+        },
+        {
+            "guid": "26d47981db21c10408ac6ec7bfecd190",
+            "prefix": "Characters/YuinaCG",
+            "path": "Look",
+            "group": "Characters/6e6f781e-5190-498b-b4dc-f36d68aef8c4"
         },
         {
             "guid": "4fa6d62f894ae6e4698bfa8af59e7942",

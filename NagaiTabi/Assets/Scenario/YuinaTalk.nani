@@ -17,7 +17,7 @@
 @else
     @showPrinter YuinaPrinter
     @printer YuinaPrinter tint:#FF000099
-    @set YuinaPose="Wink"
+    @set YuinaPose="Decided"
     @char Yuina.{YuinaPose} pos:23,0 scale:0.5 wait:false
     @print "Cada pequeño paso mueve el tren." printer:YuinaPrinter author:Yuina !waitInput
     @set G_YuinaIndex=0

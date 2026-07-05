@@ -1,88 +1,117 @@
-; Arrivals.nani — LLEGADA: @sfx del anuncio (sin cuadro) + Yuina felicita en su printer.
-; El @sfx con wait:false deja que el audio suene mientras Yuina habla a la vez.
+; Arrivals.nani — LLEGADA: @sfx (megafonía) + Yuina felicita.
+; Las líneas usan @print con printer:YuinaPrinter FORZADO, para que vayan al
+; printer pequeño aunque el Linked Printer de Yuina sea YuinaIntroPrinter.
 
 # Station01
-@sfx arr_kumamoto wait:false
+@char Yuina.Announce scale:0.5
+@sfx arr_kumamoto wait:false volume:0.7
+@showPrinter YuinaPrinter
 @printer YuinaPrinter
-Yuina: First stop! See? The train really does move when you put the hours in. No turning back now.
+@print "First stop! See? The train really does move when you put the hours in. No turning back now." printer:YuinaPrinter author:Yuina !waitInput
 @stop
 
 # Station02
-@sfx arr_hakata wait:false
+@char Yuina.Announce scale:0.5
+@sfx arr_hakata wait:false volume:0.7
+@showPrinter YuinaPrinter
 @printer YuinaPrinter
-Yuina: Fukuoka already? You're sticking with this better than most people do. I'm a little impressed.
+@print "Fukuoka already? You're sticking with this better than most people do. I'm a little impressed." printer:YuinaPrinter author:Yuina !waitInput
 @stop
 
 # Station03
-@sfx arr_yamaguti wait:false
+@char Yuina.Announce scale:0.5
+@sfx arr_yamaguti wait:false volume:0.7
+@showPrinter YuinaPrinter
 @printer YuinaPrinter
-Yuina: Fifty hours in. Honestly? I figured you'd have wandered off by now. Glad you proved me wrong.
+@print "Fifty hours in. Honestly? I figured you'd have wandered off by now. Glad you proved me wrong." printer:YuinaPrinter author:Yuina !waitInput
 @stop
 
 # Station04
-@sfx arr_hirosima wait:false
+@char Yuina.Announce scale:0.5
+@sfx arr_hirosima wait:false volume:0.7
+@showPrinter YuinaPrinter
 @printer YuinaPrinter
-Yuina: Hiroshima. You're starting to get a feel for the rhythm of this, aren't you? Keep that momentum.
+@print "Hiroshima. You're starting to get a feel for the rhythm of this, aren't you? Keep that momentum." printer:YuinaPrinter author:Yuina !waitInput
 @stop
 
 # Station05
-@sfx arr_takamatu wait:false
+@char Yuina.Announce scale:0.5
+@sfx arr_takamatu wait:false volume:0.7
+@showPrinter YuinaPrinter
 @printer YuinaPrinter
-Yuina: Things get a little steeper from here. But don't worry — I'm riding right alongside you.
+@print "Things get a little steeper from here. But don't worry — I'm riding right alongside you." printer:YuinaPrinter author:Yuina !waitInput
 @stop
 
 # Station06
-@sfx arr_oosaka wait:false
+@char Yuina.Announce scale:0.5
+@sfx arr_oosaka wait:false volume:0.7
+@showPrinter YuinaPrinter
 @printer YuinaPrinter
-Yuina: Two hundred hours. I shouldn't underestimate anyone who makes it this far. You've earned this stop.
+@print "Two hundred hours. I shouldn't underestimate anyone who makes it this far. You've earned this stop." printer:YuinaPrinter author:Yuina !waitInput
 @stop
 
 # Station07
-@sfx arr_tokyo wait:false
+@char Yuina.Announce scale:0.5
+@sfx arr_tokyo wait:false volume:0.7
+@showPrinter YuinaPrinter
 @printer YuinaPrinter
-Yuina: Tokyo — the liveliest station on the line. Your Japanese is getting livelier too, you know.
+@print "Tokyo — the liveliest station on the line. Your Japanese is getting livelier too, you know." printer:YuinaPrinter author:Yuina !waitInput
 @stop
 
 # Station08
-@sfx arr_ooarai wait:false
+@char Yuina.Announce scale:0.5
+@sfx arr_ooarai wait:false volume:0.7
+@showPrinter YuinaPrinter
 @printer YuinaPrinter
-Yuina: By now this isn't really "studying" anymore, is it? It's just part of your days. I love that.
+@print "By now this isn't really studying anymore, is it? It's just part of your days. I love that." printer:YuinaPrinter author:Yuina !waitInput
 @stop
 
 # Station09
-@sfx arr_fukusima wait:false
+@char Yuina.Announce scale:0.5
+@sfx arr_fukusima wait:false volume:0.7
+@showPrinter YuinaPrinter
 @printer YuinaPrinter
-Yuina: I'll be honest with you. Not many people make it this far without giving up. You're something else.
+@print "I'll be honest with you. Not many people make it this far without giving up. You're something else." printer:YuinaPrinter author:Yuina !waitInput
 @stop
 
 # Station10
-@sfx arr_sendai wait:false
+@char Yuina.Announce scale:0.5
+@sfx arr_sendai wait:false volume:0.7
+@showPrinter YuinaPrinter
 @printer YuinaPrinter
-Yuina: Eight hundred hours. The number alone is dizzying… but you got here one step at a time, didn't you?
+@print "Eight hundred hours. The number alone is dizzying... but you got here one step at a time, didn't you?" printer:YuinaPrinter author:Yuina !waitInput
 @stop
 
 # Station11
-@sfx arr_tugaru wait:false
+@char Yuina.Announce scale:0.5
+@sfx arr_tugaru wait:false volume:0.7
+@showPrinter YuinaPrinter
 @printer YuinaPrinter
-Yuina: A thousand hours. We crossed that line together. I'm feeling a little sentimental, honestly.
+@print "A thousand hours. We crossed that line together. I'm feeling a little sentimental, honestly." printer:YuinaPrinter author:Yuina !waitInput
 @stop
 
 # Station12
-@sfx arr_hakodate wait:false
+@char Yuina.Announce scale:0.5
+@sfx arr_hakodate wait:false volume:0.7
+@showPrinter YuinaPrinter
 @printer YuinaPrinter
-Yuina: Lately your Japanese has this… ease to it. Less "thinking before speaking." It makes me happy.
+@print "Lately your Japanese has this... ease to it. Less thinking before speaking. It makes me happy." printer:YuinaPrinter author:Yuina !waitInput
 @stop
 
 # Station13
-@sfx arr_sapporo wait:false
+@char Yuina.Announce scale:0.5
+@sfx arr_sapporo wait:false volume:0.7
+@showPrinter YuinaPrinter
 @printer YuinaPrinter
-Yuina: Not much track left now. Part of me will miss this — but that's just proof of how far you've come.
+@print "Not much track left now. Part of me will miss this — but that's just proof of how far you've come." printer:YuinaPrinter author:Yuina !waitInput
 @stop
 
 # Station14
-@sfx arr_wakkanai wait:false
+@char Yuina.Announce scale:0.5
+@sfx arr_wakkanai wait:false volume:0.7
+@showPrinter YuinaPrinter
 @printer YuinaPrinter
-Yuina: Wakkanai. The final stop. …I didn't think we'd actually make it, back at the start. I'm so glad we traveled this together. Thank you.
+@print "Wakkanai. The final stop. ...I didn't think we'd actually make it, back at the start. I'm so glad we traveled this together. Thank you." printer:YuinaPrinter author:Yuina !waitInput
 @stop
 
 # End
