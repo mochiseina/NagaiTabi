@@ -217,6 +217,12 @@
             "group": "Backgrounds/cb3b6c32-610b-45ee-869f-1f2624ae8547"
         },
         {
+            "guid": "8f4877c12d766fe42b162086b0eea8ed",
+            "prefix": "Backgrounds/MainBackground",
+            "path": "OkinawaSunset2",
+            "group": "Backgrounds/cb3b6c32-610b-45ee-869f-1f2624ae8547"
+        },
+        {
             "guid": "06966371941027a43b450bf1cb4dde56",
             "prefix": "Backgrounds/MainBackground",
             "path": "Sunset",
@@ -241,6 +247,12 @@
             "group": "Characters/f6292e0c-82f6-4e23-a331-72e090f1b412"
         },
         {
+            "guid": "e6899905ee525644fa52ebff419239cf",
+            "prefix": "Characters/Yuina",
+            "path": "Happy",
+            "group": "Characters/f6292e0c-82f6-4e23-a331-72e090f1b412"
+        },
+        {
             "guid": "ce2c691bed67a5245a2e4f1f5e939598",
             "prefix": "Characters/Yuina",
             "path": "Hehe",
@@ -259,7 +271,19 @@
             "group": "Characters/f6292e0c-82f6-4e23-a331-72e090f1b412"
         },
         {
-            "guid": "10165f70632b3824b8699d29ca877263",
+            "guid": "b4cf909b3d1f3ac478c5c4f278056637",
+            "prefix": "Characters/Yuina",
+            "path": "Talk",
+            "group": "Characters/f6292e0c-82f6-4e23-a331-72e090f1b412"
+        },
+        {
+            "guid": "3765f3057a00cdd4bb65f961c431c88b",
+            "prefix": "Characters/Yuina",
+            "path": "What",
+            "group": "Characters/f6292e0c-82f6-4e23-a331-72e090f1b412"
+        },
+        {
+            "guid": "aaaf4c3084b2f1c4b94116e24338c32f",
             "prefix": "Characters/Yuina",
             "path": "Wink",
             "group": "Characters/f6292e0c-82f6-4e23-a331-72e090f1b412"
@@ -610,6 +634,216 @@
             "guid": "bb95f484e341dcd4391a572f22b7d067",
             "prefix": "UI",
             "path": "VariableInputUI",
+            "group": ""
+        },
+        {
+            "guid": "f78a933676218ba4eb666033092727c3",
+            "prefix": "Voice",
+            "path": "yuina_entry_06_001",
+            "group": ""
+        },
+        {
+            "guid": "fd7b1720c76d05e4fba5da76d8d3db33",
+            "prefix": "Voice",
+            "path": "yuina_entry_06_002",
+            "group": ""
+        },
+        {
+            "guid": "fe83478983e779d4e90a348fb4f7d053",
+            "prefix": "Voice",
+            "path": "yuina_entry_06_003",
+            "group": ""
+        },
+        {
+            "guid": "33704603f874cd34fa2a81983bada907",
+            "prefix": "Voice",
+            "path": "yuina_entry_06_004",
+            "group": ""
+        },
+        {
+            "guid": "a95afc260ba3e364492b14f34404e427",
+            "prefix": "Voice",
+            "path": "yuina_entry_06_005",
+            "group": ""
+        },
+        {
+            "guid": "c92296675f4cf5c4ab000c269dadc719",
+            "prefix": "Voice",
+            "path": "yuina_entry_06_006",
+            "group": ""
+        },
+        {
+            "guid": "0a4db451eb469db43ac489a5944f13c6",
+            "prefix": "Voice",
+            "path": "yuina_entry_06_007",
+            "group": ""
+        },
+        {
+            "guid": "b7e141b1d79241742a1eb6b6d98fdbe6",
+            "prefix": "Voice",
+            "path": "yuina_entry_06_008",
+            "group": ""
+        },
+        {
+            "guid": "79f1ee976bbcdb44da97498feca043f6",
+            "prefix": "Voice",
+            "path": "yuina_entry_06_009",
+            "group": ""
+        },
+        {
+            "guid": "9740e8e8548eaf441bd61fd48e788093",
+            "prefix": "Voice",
+            "path": "yuina_entry_06_010",
+            "group": ""
+        },
+        {
+            "guid": "9e676b7ea1870364296bf66423fac3b5",
+            "prefix": "Voice",
+            "path": "yuina_entry_06_011",
+            "group": ""
+        },
+        {
+            "guid": "030479572cd551346950068a38a2377a",
+            "prefix": "Voice",
+            "path": "yuina_entry_06_012",
+            "group": ""
+        },
+        {
+            "guid": "34365274ee56314489068498a265c95d",
+            "prefix": "Voice",
+            "path": "yuina_entry_06_013",
+            "group": ""
+        },
+        {
+            "guid": "b28490724acd1a74595c9d2e6ef13757",
+            "prefix": "Voice",
+            "path": "yuina_entry_06_014",
+            "group": ""
+        },
+        {
+            "guid": "dee65d3c9ba215c4fb4a3f3afaccd21e",
+            "prefix": "Voice",
+            "path": "yuina_entry_06_015",
+            "group": ""
+        },
+        {
+            "guid": "9de7fa1ab831a824e89f254222763f4d",
+            "prefix": "Voice",
+            "path": "yuina_entry_06_016",
+            "group": ""
+        },
+        {
+            "guid": "67eb01f907be831448ef5fbad7bce606",
+            "prefix": "Voice",
+            "path": "yuina_entry_06_017",
+            "group": ""
+        },
+        {
+            "guid": "b7b1c8d5d62f3bf4a98247f69af49af2",
+            "prefix": "Voice",
+            "path": "yuina_entry_07_001",
+            "group": ""
+        },
+        {
+            "guid": "38d06ad778658de4992cfb3ded4b23cb",
+            "prefix": "Voice",
+            "path": "yuina_entry_07_002",
+            "group": ""
+        },
+        {
+            "guid": "9bd0a8290d3fd9d43848ea1fe3fe14d2",
+            "prefix": "Voice",
+            "path": "yuina_entry_07_003",
+            "group": ""
+        },
+        {
+            "guid": "aeb9dd047277b4a4c81522f7011bcfbc",
+            "prefix": "Voice",
+            "path": "yuina_entry_07_004",
+            "group": ""
+        },
+        {
+            "guid": "2878ae23dce725343b4c9cf2ed5c78e8",
+            "prefix": "Voice",
+            "path": "yuina_entry_07_005",
+            "group": ""
+        },
+        {
+            "guid": "5f72c72d85247274abd0e0c0fa6f0f24",
+            "prefix": "Voice",
+            "path": "yuina_entry_07_006",
+            "group": ""
+        },
+        {
+            "guid": "4d2cc8f68f35b4e45bd590c3081ba8c2",
+            "prefix": "Voice",
+            "path": "yuina_entry_07_007",
+            "group": ""
+        },
+        {
+            "guid": "5b57318b9c30c1a4aa7dd767954f4a62",
+            "prefix": "Voice",
+            "path": "yuina_entry_07_008",
+            "group": ""
+        },
+        {
+            "guid": "97eb2128461cfa440989ead6f464a035",
+            "prefix": "Voice",
+            "path": "yuina_entry_07_009",
+            "group": ""
+        },
+        {
+            "guid": "bfd7a6c7a29f7564f959f61e82b574c5",
+            "prefix": "Voice",
+            "path": "yuina_entry_07_010",
+            "group": ""
+        },
+        {
+            "guid": "0e15682b33a304f409ef8b591896c9f6",
+            "prefix": "Voice",
+            "path": "yuina_entry_07_011",
+            "group": ""
+        },
+        {
+            "guid": "87d654f7cd7d09c4794407b379346fab",
+            "prefix": "Voice",
+            "path": "yuina_entry_07_012",
+            "group": ""
+        },
+        {
+            "guid": "d441074a74ec890489f677c721d2f43e",
+            "prefix": "Voice",
+            "path": "yuina_entry_08_001",
+            "group": ""
+        },
+        {
+            "guid": "d2bb6367dd1819b49a748d30d97993c4",
+            "prefix": "Voice",
+            "path": "yuina_entry_08_002",
+            "group": ""
+        },
+        {
+            "guid": "8dece513e67901a4f91611bf21c99c0d",
+            "prefix": "Voice",
+            "path": "yuina_entry_08_003",
+            "group": ""
+        },
+        {
+            "guid": "506355d710b8cc140940cf164a187085",
+            "prefix": "Voice",
+            "path": "yuina_entry_08_004",
+            "group": ""
+        },
+        {
+            "guid": "e824ebb376f35494899590e9485f34a1",
+            "prefix": "Voice",
+            "path": "yuina_entry_08_005",
+            "group": ""
+        },
+        {
+            "guid": "f09b889d23f8e034fb46c265df6b2fd2",
+            "prefix": "Voice",
+            "path": "yuina_entry_08_006",
             "group": ""
         }
     ]

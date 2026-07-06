@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 063b2f8d0ed22c543a82c0ad03561fe0
+guid: e6899905ee525644fa52ebff419239cf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5969225455145689216
-    second: PH_NT_Wink_0
+      213: -4541283026847267792
+    second: NT_YuinaHappy_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PH_NT_Wink_0
+      name: NT_YuinaHappy_0
       rect:
         serializedVersion: 2
         x: 14
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 080ad26dce2f6d250800000000000000
-      internalID: 5969225455145689216
+      spriteID: 0340248d52f1af0c0800000000000000
+      internalID: -4541283026847267792
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      PH_NT_Wink_0: 5969225455145689216
+      NT_YuinaHappy_0: -4541283026847267792
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
