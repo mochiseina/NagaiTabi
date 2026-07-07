@@ -204,7 +204,6 @@ Yuina: I can see the determination in your eyes.
 
 @char Yuina.Neutral scale:0.5
 Yuina: Then we're almost ready.
-
 Yuina: Before we begin...
 Yuina: tell me what you'd like me to call you.
 
@@ -229,6 +228,8 @@ Yuina: your progress will take us through many places across Japan.
 
 @wait 0.4
 @hideAll
+@stopSfx CricketsFireflies
+@stopSfx OceanSound
 @goto MainTracker
 
 ; --- Bucle del "No" ---

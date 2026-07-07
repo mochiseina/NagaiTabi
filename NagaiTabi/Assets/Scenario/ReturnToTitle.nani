@@ -1,0 +1,8 @@
+; ReturnToTitle.nani — vuelve al menú de título desde el tracker.
+; Para la música y limpia la escena de Naninovel, luego muestra el TitleUI.
+
+@stopBgm fade:0.5
+@hideAll
+@hideUI TrackerUI
+@goto Title
+@stop
