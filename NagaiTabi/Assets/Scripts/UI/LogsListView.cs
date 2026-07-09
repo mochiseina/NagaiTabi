@@ -7,6 +7,24 @@ public class LogsListView : MonoBehaviour
 	[SerializeField] private LogItemView logItemPrefab;
 	[SerializeField] private int maxLogsToShow = 3;
 
+	private void OnEnable()
+	{
+		// Refresco en tiempo real: se actualiza sola con cada nuevo log.
+		if (trackerManager != null)
+			trackerManager.OnEntryLogged += HandleEntryLogged;
+	}
+
+	private void OnDisable()
+	{
+		if (trackerManager != null)
+			trackerManager.OnEntryLogged -= HandleEntryLogged;
+	}
+
+	private void HandleEntryLogged(ImmersionEntry entry)
+	{
+		Refresh();
+	}
+
 	public void Refresh()
 	{
 		if (trackerManager == null || contentRoot == null || logItemPrefab == null)

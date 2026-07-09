@@ -42,6 +42,7 @@ public static class StatsCalculator
 
 		CalculateStreaks(data, stats);
 		CalculateDailyReadingAverage(data, stats);
+		CalculateDailyAverageHours(data, stats);
 
 		return stats;
 	}
@@ -57,14 +58,6 @@ public static class StatsCalculator
 		int listeningPart = 10 - readingPart;
 		return $"{readingPart} : {listeningPart}";
 	}
-
-	/// <summary>
-	/// Racha = días consecutivos (fecha local) con al menos 1 log.
-	/// - currentStreak: cuenta hacia atrás desde HOY; si hoy no hay log pero ayer sí,
-	///   la racha sigue viva (cuenta hasta ayer).
-	/// - longestStreak: la secuencia consecutiva más larga del historial.
-	/// - loggedToday: si hay al menos un log con fecha de hoy.
-	/// </summary>
 	private static void CalculateStreaks(TrackerData data, TrackerStats stats)
 	{
 		// Conjunto de días únicos (a medianoche local) que tienen algún log.
@@ -139,5 +132,20 @@ public static class StatsCalculator
 		stats.dailyAverageChars = readingDays.Count > 0
 			? Mathf.RoundToInt((float)stats.totalChars / readingDays.Count)
 			: 0;
+	}
+
+	/// <summary>Media de horas por día con actividad (horas totales / días activos, cualquier tipo).</summary>
+	private static void CalculateDailyAverageHours(TrackerData data, TrackerStats stats)
+	{
+		var activeDays = new HashSet<DateTime>();
+		foreach (var entry in data.entries)
+		{
+			if (DateTime.TryParse(entry.dateIso, out var dt))
+				activeDays.Add(dt.ToLocalTime().Date);
+		}
+
+		stats.dailyAverageHours = activeDays.Count > 0
+			? stats.totalHours / activeDays.Count
+			: 0f;
 	}
 }

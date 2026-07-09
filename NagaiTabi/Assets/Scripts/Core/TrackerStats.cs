@@ -14,13 +14,14 @@ public class TrackerStats
 
 	public string readingListeningRatioText;
 
-	// --- Racha (días consecutivos con al menos 1 log) ---
-	public int currentStreak;   // racha actual (viva)
-	public int longestStreak;   // racha más larga alcanzada
-	public bool loggedToday;    // ¿ya hay al menos un log hoy?
+	//racha
+	public int currentStreak;   //racha actual (viva)
+	public int longestStreak;   //racha más larga alcanzada
+	public bool loggedToday;    //ya hay al menos un log hoy?
 
-	// --- Métricas de lectura ---
-	public int totalChars;              // caracteres leídos acumulados
-	public float avgReadingSpeed;       // chars por hora de lectura
-	public int dailyAverageChars;       // media de chars por día activo de lectura
+	//lectura
+	public int totalChars;              //caracteres leídos acumulados
+	public float avgReadingSpeed;       //chars por hora de lectura
+	public int dailyAverageChars;       //media de chars por día activo de lectura
+	public float dailyAverageHours;     //media de horas por día activo (cualquier tipo)
 }

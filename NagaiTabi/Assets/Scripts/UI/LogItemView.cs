@@ -28,7 +28,10 @@ public class LogItemView : MonoBehaviour
 			if (DateTime.TryParse(entry.dateIso, out var dt))
 				dateText = dt.ToString("dd/MM/yyyy HH:mm");
 
-			metaText.text = $"{duration} · {dateText}";
+			// Muestra los caracteres solo si el log tiene (>0), típico en lectura.
+			string charsText = entry.chars > 0 ? $" · {entry.chars:N0} chars" : "";
+
+			metaText.text = $"{duration}{charsText} · {dateText}";
 		}
 
 		if (topBorder != null)

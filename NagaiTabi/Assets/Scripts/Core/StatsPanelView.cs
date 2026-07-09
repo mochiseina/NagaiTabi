@@ -14,6 +14,32 @@ public class StatsPanelView : MonoBehaviour
 	[Tooltip("Recuadro morado: racha actual.")]
 	[SerializeField] private TextMeshProUGUI streakText;
 
+	[Header("Métricas de lectura")]
+	[SerializeField] private TextMeshProUGUI totalCharsText;
+	[SerializeField] private TextMeshProUGUI readingSpeedText;
+	[SerializeField] private TextMeshProUGUI dailyAvgCharsText;
+	[SerializeField] private TextMeshProUGUI dailyAvgHoursText;
+
+	private void OnEnable()
+	{
+		//Refresca al mostrarse la pestaña (cubre logs hechos con Stats oculta)
+		// y en tiempo real mientras esté visible
+		Refresh();
+		if (trackerManager != null)
+			trackerManager.OnEntryLogged += HandleEntryLogged;
+	}
+
+	private void OnDisable()
+	{
+		if (trackerManager != null)
+			trackerManager.OnEntryLogged -= HandleEntryLogged;
+	}
+
+	private void HandleEntryLogged(ImmersionEntry entry)
+	{
+		Refresh();
+	}
+
 	public void Refresh()
 	{
 		if (trackerManager == null)
@@ -41,14 +67,21 @@ public class StatsPanelView : MonoBehaviour
 
 		if (streakText != null)
 		{
-			// "day" en singular si es 1, "days" si no.
 			string unit = stats.currentStreak == 1 ? "day" : "days";
 			streakText.text = $"Streak: {stats.currentStreak} {unit}";
 		}
-	}
 
-	private void Start()
-	{
-		Refresh();
+		// --- Métricas de lectura nuevas ---
+		if (totalCharsText != null)
+			totalCharsText.text = $"Total Chars: {stats.totalChars:N0}";
+
+		if (readingSpeedText != null)
+			readingSpeedText.text = $"Reading Speed: {stats.avgReadingSpeed:N0} cph";
+
+		if (dailyAvgCharsText != null)
+			dailyAvgCharsText.text = $"Daily Avg Chars: {stats.dailyAverageChars:N0}";
+
+		if (dailyAvgHoursText != null)
+			dailyAvgHoursText.text = $"Daily Avg Hours: {stats.dailyAverageHours:0.0} h";
 	}
 }
