@@ -44,41 +44,41 @@ The wind caressed her hair as if they were acquainted since forever.
 @showPrinter YuinaIntroPrinter
 @printer YuinaIntroPrinter default! !hideOther
 
-@voice yuina_entry_06_001
+@voice yuina_entry_06_001 volume:0.7
 Yuina: ...Oh.
-@voice yuina_entry_06_002
+@voice yuina_entry_06_002 volume:0.7
 Yuina: From the way you're looking at me, I can tell you're not from around here.
-@voice yuina_entry_06_003
+@voice yuina_entry_06_003 volume:0.7
 Yuina: So you really did find me.
 
 ; --- Cuarta pared: tú diste el paso ---
-@voice yuina_entry_06_004
+@voice yuina_entry_06_004 volume:0.7
 Yuina: You pressed "New Game", didn't you?
-@voice yuina_entry_06_005
+@voice yuina_entry_06_005 volume:0.7
 Yuina: That means you chose to come here.
-@voice yuina_entry_06_006
+@voice yuina_entry_06_006 volume:0.7
 Yuina: I've been waiting on this platform for someone to open this software. I'm glad it was you.
-@voice yuina_entry_06_007
+@voice yuina_entry_06_007 volume:0.7
 Yuina: If you hadn't come... I suppose I would've stayed here forever.
-@voice yuina_entry_06_008
+@voice yuina_entry_06_008 volume:0.7
 Yuina: At least I had a beautiful view.
-@voice yuina_entry_06_009
+@voice yuina_entry_06_009 volume:0.7
 Yuina: The sea, the sunset, the sound of everything...
-@voice yuina_entry_06_010
+@voice yuina_entry_06_010 volume:0.7
 Yuina: It almost makes waiting feel peaceful.
-@voice yuina_entry_06_011
+@voice yuina_entry_06_011 volume:0.7
 Yuina: ...
-@voice yuina_entry_06_012
+@voice yuina_entry_06_012 volume:0.7
 Yuina: Starting is already a big part of the journey, you know?
-@voice yuina_entry_06_013
+@voice yuina_entry_06_013 volume:0.7
 Yuina: A train doesn't reach the north by thinking about moving.
-@voice yuina_entry_06_014 
+@voice yuina_entry_06_014 volume:0.7
 Yuina: It moves because someone gives it a reason to.
-@voice yuina_entry_06_015 
+@voice yuina_entry_06_015 volume:0.7
 Yuina: Ah.
-@voice yuina_entry_06_016 
+@voice yuina_entry_06_016 volume:0.7 
 Yuina: How rude of me. I shouldn't introduce myself from a window like this.
-@voice yuina_entry_06_017 
+@voice yuina_entry_06_017 volume:0.7 
 Yuina: Give me a moment, I'll hop off.
 
 She actually hopped down from the window.
@@ -90,104 +90,133 @@ She actually hopped down from the window.
 
 
 @char Yuina.Happy scale:0.5
-@voice yuina_entry_07_001
+@voice yuina_entry_07_001 volume:0.7
 Yuina: There.
 
-@char Yuina.Hehe scale:0.5
-@voice yuina_entry_07_002
+@char Yuina.Hehe scale:0.8
+@voice yuina_entry_07_002 volume:0.7
 Yuina: Better, right?
 
 @char Yuina.Happy scale:0.5
-@voice yuina_entry_07_003 
+@voice yuina_entry_07_003 volume:0.7 
 Yuina: You can probably already see my name on the screen, so I suppose I don't need to introduce myself.
 
 @char Yuina.What scale:0.5
-@voice yuina_entry_07_004 
+@voice yuina_entry_07_004 volume:0.7 
 Yuina: Unless you can't read it.
-@voice yuina_entry_07_005 
+@voice yuina_entry_07_005 volume:0.7 
 Yuina: In which case... we may have even more work to do than I thought.
 
 @char Yuina.Announce scale:0.5
-@voice yuina_entry_07_006 
+@voice yuina_entry_07_006 volume:0.7 
 Yuina: My full name is Nishizono Yuina. I'm a train conductor by trade.
 
 @char Yuina.Angry scale:0.5
-@voice yuina_entry_07_007 
+@voice yuina_entry_07_007 volume:0.7 
 Yuina: But my real passion is language acquisition.
-@voice yuina_entry_07_008 
+@voice yuina_entry_07_008 volume:0.7 
 Yuina: How people learn, how they forget.
-@voice yuina_entry_07_009
+@voice yuina_entry_07_009 volume:0.7
 Yuina: How they keep going even when nothing seems to be changing.
 
 @char Yuina.Happy scale:0.5
-@voice yuina_entry_07_010 
+@voice yuina_entry_07_010 volume:0.7 
 Yuina: I suppose that's why I love travelling, too.
 
 @char Yuina.Decided scale:0.5
-@voice yuina_entry_07_011 
+@voice yuina_entry_07_011 volume:0.7 
 Yuina: A journey and a language are very similar. You don't feel every meter.
-@voice yuina_entry_07_012 
+@voice yuina_entry_07_012 volume:0.7 
 Yuina: But one day, you look back... and realize the place where you started is far behind you.
 
 @char Yuina.Hehe scale:0.5
-@voice yuina_entry_08_001 
+@voice yuina_entry_08_001 volume:0.7 
 Yuina: This train is bound for Wakkanai.
-@voice yuina_entry_08_002
+@voice yuina_entry_08_002 volume:0.7
 Yuina: We begin here, near Okinawa, at the southern edge of the journey.
 
 @char Yuina.Decided scale:0.5
-@voice yuina_entry_08_003 
+@voice yuina_entry_08_003 volume:0.7 
 Yuina: But this isn't an ordinary railway at all. It doesn't even run on tickets. 
-@voice yuina_entry_08_004 
+@voice yuina_entry_08_004 volume:0.7 
 Yuina: It runs on immersion. On the minutes and hours you spend with the Japanese language.
-@voice yuina_entry_08_005 
+@voice yuina_entry_08_005 volume:0.7 
 Yuina: Reading it. Listening to it. Watching it.
 
 @char Yuina.Serious scale:0.5
-@voice yuina_entry_08_006 
+@voice yuina_entry_08_006 volume:0.7 
 Yuina: Every minute you log becomes energy for this train.
+@voice yuina_entry_08_007 volume:0.7
 Yuina: And every time the train moves... I can guide you a little farther.
+@voice yuina_entry_08_008 volume:0.7
 Yuina: I can teach you something useful, show you where you are, and remind you why the process works.
 
 ;; --- Por qué te necesita ---
 @char Yuina.Worry scale:0.5
+@voice yuina_entry_08_009 volume:0.7
 Yuina: ...
+@voice yuina_entry_08_010 volume:0.7
 Yuina: The truth is...
+@voice yuina_entry_08_011 volume:0.7
 Yuina: I can't move this train alone.
+@voice yuina_entry_08_012 volume:0.7
 Yuina: Japanese is already my language.
+@voice yuina_entry_08_013 volume:0.7
 Yuina: I grew up with it. So I have no journey to log.
 
 @char Yuina.Happy scale:0.5
+@voice yuina_entry_08_014 volume:0.7
 Yuina: But you do.
+@voice yuina_entry_08_015 volume:0.7
 Yuina: You still have distance ahead of you.
+@voice yuina_entry_08_016 volume:0.7
 Yuina: And that means you still have energy to give.
 
 @char Yuina.Hehe scale:0.5
+@voice yuina_entry_08_017 volume:0.55
 Yuina: We'll travel across Japan together.
+@voice yuina_entry_08_018 volume:0.8
+@char Yuina.Worry scale:0.5
 Yuina: And if you trust me...
+@voice yuina_entry_08_019 volume:0.9
 Yuina: and yourself...
+@voice yuina_entry_08_020 volume:0.73
+@char Yuina.Happy scale:0.5
 Yuina: you'll go much farther than you think.
 
 @char Yuina.Decided scale:0.5
+@voice yuina_entry_08_021 volume:0.7
 Yuina: I'll make sure this becomes a journey worth remembering.
-Yuina: And I'm not being dramatic.
+@voice yuina_entry_08_022 volume:0.7
 @char Yuina.Angry scale:0.5
+Yuina: And I'm not being dramatic.
+@voice yuina_entry_08_023 volume:0.7
+@char Yuina.What scale:0.5
 Yuina: Well. Not only dramatic.
 
 @char Yuina.Decided scale:0.5
+@voice yuina_entry_08_024 volume:0.7
 Yuina: Acquiring a language is a little like being born again.
 
 @char Yuina.Serious scale:0.5
-Yuina: You see, learning a language is a long... very long journey. It takes hundreds, even thousands of hours to reach a high level.
+@voice yuina_entry_08_025 volume:0.7
+Yuina: You see, learning a language is a long... very long journey.
+@voice yuina_entry_08_026 volume:0.7
+Yuina: It takes hundreds, even thousands of hours to reach a high level.
+@voice yuina_entry_08_027 volume:0.7
 Yuina: This train moves when you move. As long as you log your journey, those hours turn into energy.
+@voice yuina_entry_08_028 volume:0.7
 Yuina: There will be times you feel like you're not moving at all. The road may feel long, heavy... even silent.
 
 @char Yuina.Decided scale:0.5
+@voice yuina_entry_08_029 volume:0.7
 Yuina: But even the greatest journeys begin with a single entry in the log.
 
 ; --- Invitación / elección ---
 @char Yuina.Hehe scale:0.5
+@voice yuina_entry_09_001 volume:0.7
 Yuina: So then.
+@voice yuina_entry_09_002 volume:0.7
 Yuina: Will you go on with me?
 
 @set noCount=0
@@ -199,31 +228,46 @@ Yuina: Will you go on with me?
 
 # Yes
 @char Yuina.Hehe scale:0.5
+@voice yuina_entry_yes_001 volume:0.7
 Yuina: Hehe~ I knew you would.
+@voice yuina_entry_yes_002 volume:0.7
 Yuina: I can see the determination in your eyes.
 
 @char Yuina.Neutral scale:0.5
+@voice yuina_entry_yes_003 volume:0.7
 Yuina: Then we're almost ready.
+@voice yuina_entry_yes_004 volume:0.7
 Yuina: Before we begin...
+@voice yuina_entry_yes_005 volume:0.7
 Yuina: tell me what you'd like me to call you.
 
 @set PlayerName=""
 @input PlayerName summary:"How would you like Yuina to call you?" type:string
 @savePlayerName
 
+@char Yuina.Happy scale:0.5
+@voice yuina_entry_yes_006 volume:0.7
 Yuina: {PlayerName}...
 
-@char Yuina.Hehe scale:0.5
+@char Yuina.Hehe
+@voice yuina_entry_yes_007 volume:0.7
 Yuina: Yes.
+@voice yuina_entry_yes_008 volume:0.7
 Yuina: That is a name worth remembering.
 
-@char Yuina.Neutral scale:0.5
+@char Yuina.Talk scale:0.5
+@voice yuina_entry_yes_009 volume:0.7
 Yuina: Then let me show you the operations panel.
+@char Yuina.Happy scale:0.5
+@voice yuina_entry_yes_010 volume:0.7
 Yuina: Don't worry.
+@voice yuina_entry_yes_011 volume:0.7
 Yuina: You'll get used to it before you know it.
 
 @char Yuina.Decided scale:0.5
+@voice yuina_entry_yes_012 volume:0.7
 Yuina: And before we realize it...
+@voice yuina_entry_yes_013 volume:0.7
 Yuina: your progress will take us through many places across Japan.
 
 @wait 0.4
@@ -242,49 +286,69 @@ Yuina: your progress will take us through many places across Japan.
 
 # NoFirst
 @char Yuina.Worry scale:0.5
+@voice yuina_entry_no1_001 volume:0.7
 Yuina: ...Eh?
 
 @char Yuina.Angry scale:0.5
+@voice yuina_entry_no1_002 volume:0.7
 Yuina: No?
+@voice yuina_entry_no1_003 volume:0.7
 Yuina: Ah, jeez. You were definitely the funniest one in class. Haha.
+@voice yuina_entry_no1_004 volume:0.7
 Yuina: I can't believe I explained all this for nothing...
 
 @char Yuina.Hehe scale:0.5
+@voice yuina_entry_no1_005 volume:0.7
 Yuina: Ahem.
+@voice yuina_entry_no1_006 volume:0.7
 Yuina: Fine. I'm asking you again.
+@voice yuina_entry_no1_007 volume:0.7
 Yuina: Will you go on with me?
 
 @goto #Ask
 
 # NoSecond
 @char Yuina.Worry scale:0.5
+@voice yuina_entry_no2_001 volume:0.7
 Yuina: ...You're really going to keep saying no?
-
+@voice yuina_entry_no2_002 volume:0.7
 Yuina: Come on.
+@voice yuina_entry_no2_003 volume:0.7
 Yuina: I don't want to stay here for another eternity.
-
 @char Yuina.Hehe scale:0.5
+@voice yuina_entry_no2_004 volume:0.7
 Yuina: Okinawa is pretty nice, though.
 
 @char Yuina.Worry scale:0.5
+@voice yuina_entry_no2_005 volume:0.7
 Yuina: But I need to reach Wakkanai...
+@voice yuina_entry_no2_006 volume:0.7
 Yuina: And I want you to learn...
-
+@voice yuina_entry_no2_007 volume:0.7
 Yuina: Will you go on with me?
+@voice yuina_entry_no2_008 volume:0.7
 Yuina: Please?
 
 @goto #Ask
 
 # NoThird
 @char Yuina.Angry scale:0.5
+@voice yuina_entry_no3_001 volume:0.7
 Yuina: Hmph...
 
 @char Yuina.Hehe scale:0.5
-Yuina: Fine, fine. I can take a hint.
+@voice yuina_entry_no3_002 volume:0.7
+Yuina: Fine, fine. I understand.
+@voice yuina_entry_no3_003 volume:0.7
+Yuina: I can take a hint... for sure.
 
-@char Yuina.Angry scale:0.5
-Yuina: ...
+@char Yuina.Decided scale:0.5
+@voice yuina_entry_no3_004 volume:0.7
+Yuina: Hehehe...
+@voice yuina_entry_no3_005 volume:0.7
 Yuina: Then I hope you LOVE grammar drills... rote kanji memorization...
+@voice yuina_entry_no3_006 volume:0.7
+@char Yuina.Angry scale:0.5
 Yuina: ...and doing Minna no Nihongo and Genki exercises forever!
 
 @wait 1.5
