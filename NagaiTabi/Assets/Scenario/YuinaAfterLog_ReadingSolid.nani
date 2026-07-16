@@ -1,2 +1,3 @@
 @showPrinter YuinaPrinter
-@print "¡Tremebunda sesión de lectura! Estoy orgullosa de ti. Ten cuidado de que los mojis no te bailen la macarena." printer:YuinaPrinter author:Yuina !waitInput
+@char Yuina.Happy pos:23,0 scale:0.5 wait:false
+@print "What a reading session! I'm proud of you. Just don't let the characters start dancing the Macarena in front of your eyes." printer:YuinaPrinter author:Yuina !waitInput

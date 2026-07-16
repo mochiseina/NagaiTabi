@@ -22,22 +22,16 @@ public class StatsPanelView : MonoBehaviour
 
 	private void OnEnable()
 	{
-		//Refresca al mostrarse la pestaña (cubre logs hechos con Stats oculta)
-		// y en tiempo real mientras esté visible
-		Refresh();
 		if (trackerManager != null)
-			trackerManager.OnEntryLogged += HandleEntryLogged;
+			trackerManager.OnDataChanged += Refresh;
+
+		Refresh();
 	}
 
 	private void OnDisable()
 	{
 		if (trackerManager != null)
-			trackerManager.OnEntryLogged -= HandleEntryLogged;
-	}
-
-	private void HandleEntryLogged(ImmersionEntry entry)
-	{
-		Refresh();
+			trackerManager.OnDataChanged -= Refresh;
 	}
 
 	public void Refresh()

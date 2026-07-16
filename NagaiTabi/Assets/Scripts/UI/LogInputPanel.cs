@@ -39,10 +39,6 @@ public class LogInputPanel : MonoBehaviour
 		UpdateCharsAvailability();
 	}
 
-	/// <summary>
-	/// Llama a esto desde el OnClick de cada botón de medio (Anime, Manga, Reading...).
-	/// Pasa el nombre EXACTO del medio como en MediaTypeMapper.
-	/// </summary>
 	public void SetMediaType(string mediaType)
 	{
 		selectedMediaType = mediaType;
@@ -85,10 +81,6 @@ public class LogInputPanel : MonoBehaviour
 		return true;
 	}
 
-	/// <summary>
-	/// ¿Es válido el log? Reglas: medio seleccionado + al menos 1 minuto.
-	/// (chars y fecha son opcionales.) La palanca usa esto para permitir o no el registro.
-	/// </summary>
 	public bool IsValid()
 	{
 		if (string.IsNullOrEmpty(CurrentMediaType())) return false;

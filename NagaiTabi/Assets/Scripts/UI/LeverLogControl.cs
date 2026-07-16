@@ -3,21 +3,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 
-/// <summary>
-/// Palanca de registro (versión UI). Va en un objeto de UI (con Image/Button).
-/// Al accionarse: comprueba que el log es válido; si lo es, anima el BRAZO en arco
-/// alrededor de su pivote, suena un efecto y dispara OnPulled (SubmitLog).
-/// Si NO es válido, dispara OnInvalid (para un sonido de error o un aviso).
-///
-/// SETUP:
-/// 1) La palanca debe ser UI (Image), no Sprite Renderer.
-/// 2) Pon este componente en el objeto raíz de la palanca (con Button).
-/// 3) Arrastra a 'Lever Arm' el RectTransform del BRAZO (la parte que gira).
-///    Asegúrate de que el PIVOT del brazo (en su Rect Transform) esté en la BASE
-///    del brazo (p. ej. Y=0), para que el giro sea un arco real y no desde el centro.
-/// 4) En 'On Pulled ()' arrastra LogInputPanel.SubmitLog.
-/// 5) (Opcional) AudioSource + clips de palanca y de error.
-/// </summary>
 [RequireComponent(typeof(Button))]
 public class LeverLogControl : MonoBehaviour
 {
@@ -65,7 +50,6 @@ public class LeverLogControl : MonoBehaviour
     {
         if (busy) return;
 
-        // Si hay panel asignado y NO es válido, no logueamos.
         if (logInputPanel != null && !logInputPanel.IsValid())
         {
             if (audioSource != null && errorSound != null)
@@ -86,7 +70,7 @@ public class LeverLogControl : MonoBehaviour
 
         yield return Rotate(baseZ, baseZ + pullAngle, pullDuration);
 
-        OnPulled?.Invoke(); // SubmitLog
+        OnPulled?.Invoke();
 
         yield return Rotate(baseZ + pullAngle, baseZ, returnDuration);
 

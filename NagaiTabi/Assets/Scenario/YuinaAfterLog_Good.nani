@@ -1,2 +1,3 @@
 @showPrinter YuinaPrinter
-@print "Muy bien. Ya se siente como una sesión con intención." printer:YuinaPrinter author:Yuina !waitInput
+@char Yuina.Happy pos:23,0 scale:0.5 wait:false
+@print "Very good. That already feels like a session with real purpose behind it." printer:YuinaPrinter author:Yuina !waitInput

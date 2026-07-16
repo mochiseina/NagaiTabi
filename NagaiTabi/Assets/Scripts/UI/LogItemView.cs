@@ -1,7 +1,7 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using System;
 
 public class LogItemView : MonoBehaviour
 {
@@ -10,32 +10,88 @@ public class LogItemView : MonoBehaviour
 	[SerializeField] private TextMeshProUGUI titleText;
 	[SerializeField] private TextMeshProUGUI metaText;
 
-	public void Setup(ImmersionEntry entry)
+	[Header("Actions")]
+	[SerializeField] private Button deleteButton;
+
+	private string entryId;
+	private Action<string> deleteCallback;
+
+	public void Setup(
+		ImmersionEntry entry,
+		Action<string> onDeleteRequested
+	)
 	{
+		entryId = entry.entryId;
+		deleteCallback = onDeleteRequested;
+
 		if (mediaTypeText != null)
 			mediaTypeText.text = entry.mediaType;
 
 		if (titleText != null)
-			titleText.text = string.IsNullOrWhiteSpace(entry.title) ? "(sin título)" : entry.title;
+		{
+			titleText.text = string.IsNullOrWhiteSpace(entry.title)
+				? "(sin título)"
+				: entry.title;
+		}
 
 		if (metaText != null)
 		{
-			int h = entry.minutes / 60;
-			int m = entry.minutes % 60;
-			string duration = h > 0 ? $"{h}h {m}m" : $"{m}m";
+			int hours = entry.minutes / 60;
+			int minutes = entry.minutes % 60;
+
+			string duration = hours > 0
+				? $"{hours}h {minutes}m"
+				: $"{minutes}m";
 
 			string dateText = entry.dateIso;
-			if (DateTime.TryParse(entry.dateIso, out var dt))
-				dateText = dt.ToString("dd/MM/yyyy HH:mm");
 
-			// Muestra los caracteres solo si el log tiene (>0), típico en lectura.
-			string charsText = entry.chars > 0 ? $" · {entry.chars:N0} chars" : "";
+			if (DateTime.TryParse(entry.dateIso, out DateTime date))
+				dateText = date.ToString("dd/MM/yyyy HH:mm");
 
-			metaText.text = $"{duration}{charsText} · {dateText}";
+			string charsText = entry.chars > 0
+				? $" · {entry.chars:N0} chars"
+				: "";
+
+			metaText.text =
+				$"{duration}{charsText} · {dateText}";
 		}
 
 		if (topBorder != null)
 			topBorder.color = GetColorForMediaType(entry.mediaType);
+
+		if (deleteButton != null)
+		{
+			deleteButton.onClick.RemoveListener(
+				HandleDeleteClicked
+			);
+
+			deleteButton.onClick.AddListener(
+				HandleDeleteClicked
+			);
+		}
+	}
+
+	private void HandleDeleteClicked()
+	{
+		if (string.IsNullOrWhiteSpace(entryId))
+		{
+			Debug.LogWarning(
+				"[LogItemView] El log no tiene entryId."
+			);
+			return;
+		}
+
+		deleteCallback?.Invoke(entryId);
+	}
+
+	private void OnDestroy()
+	{
+		if (deleteButton != null)
+		{
+			deleteButton.onClick.RemoveListener(
+				HandleDeleteClicked
+			);
+		}
 	}
 
 	private Color GetColorForMediaType(string mediaType)
@@ -44,24 +100,32 @@ public class LogItemView : MonoBehaviour
 		{
 			case "Anime":
 				return new Color(1f, 0.2f, 0.6f);
+
 			case "Visual Novel":
 				return new Color(0.1f, 0.9f, 0.9f);
+
 			case "Manga":
 				return new Color(0.7f, 0.3f, 1f);
+
 			case "Light Novel":
 				return new Color(0.4f, 0.7f, 1f);
+
 			case "Audio":
 			case "Audiobook":
 			case "Podcast":
 				return new Color(0.2f, 1f, 0.4f);
+
 			case "Live Action":
 			case "Movie":
 			case "Video":
 				return new Color(1f, 0.5f, 0.2f);
+
 			case "Text":
 				return new Color(0.9f, 0.9f, 0.3f);
+
 			case "Game":
 				return new Color(0.3f, 1f, 0.8f);
+
 			default:
 				return Color.white;
 		}

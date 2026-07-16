@@ -9,47 +9,72 @@ public class LogsListView : MonoBehaviour
 
 	private void OnEnable()
 	{
-		// Refresco en tiempo real: se actualiza sola con cada nuevo log.
 		if (trackerManager != null)
-			trackerManager.OnEntryLogged += HandleEntryLogged;
+			trackerManager.OnDataChanged += Refresh;
+
+		Refresh();
 	}
 
 	private void OnDisable()
 	{
 		if (trackerManager != null)
-			trackerManager.OnEntryLogged -= HandleEntryLogged;
+			trackerManager.OnDataChanged -= Refresh;
 	}
 
-	private void HandleEntryLogged(ImmersionEntry entry)
+	private void HandleDeleteRequested(string entryId)
 	{
-		Refresh();
+		if (trackerManager == null)
+			return;
+
+		trackerManager.DeleteEntry(entryId);
 	}
 
 	public void Refresh()
 	{
-		if (trackerManager == null || contentRoot == null || logItemPrefab == null)
+		if (
+			trackerManager == null ||
+			contentRoot == null ||
+			logItemPrefab == null
+		)
 		{
-			Debug.LogWarning("[LogsListView] Faltan referencias.");
+			Debug.LogWarning(
+				"[LogsListView] Faltan referencias."
+			);
 			return;
 		}
 
+		// Se separan antes de destruir para que el Layout Group
+		// no siga contando objetos pendientes de destrucción.
 		for (int i = contentRoot.childCount - 1; i >= 0; i--)
-			Destroy(contentRoot.GetChild(i).gameObject);
+		{
+			Transform child = contentRoot.GetChild(i);
+			child.SetParent(null);
+			Destroy(child.gameObject);
+		}
 
 		var entries = trackerManager.Data.entries;
-		int startIndex = Mathf.Max(0, entries.Count - maxLogsToShow);
+
+		int startIndex = Mathf.Max(
+			0,
+			entries.Count - maxLogsToShow
+		);
 
 		for (int i = entries.Count - 1; i >= startIndex; i--)
 		{
-			var item = Instantiate(logItemPrefab, contentRoot);
-			item.Setup(entries[i]);
+			LogItemView item = Instantiate(
+				logItemPrefab,
+				contentRoot
+			);
+
+			item.Setup(
+				entries[i],
+				HandleDeleteRequested
+			);
 		}
 
-		Debug.Log($"[LogsListView] Mostrando {Mathf.Min(entries.Count, maxLogsToShow)} logs.");
-	}
-
-	private void Start()
-	{
-		Refresh();
+		Debug.Log(
+			$"[LogsListView] Mostrando " +
+			$"{Mathf.Min(entries.Count, maxLogsToShow)} logs."
+		);
 	}
 }

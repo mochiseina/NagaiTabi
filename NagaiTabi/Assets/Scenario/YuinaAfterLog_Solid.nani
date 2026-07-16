@@ -1,2 +1,3 @@
 @showPrinter YuinaPrinter
-@print "¡Uwah! Qué buena sesión, campeón. Now you're cooking!" printer:YuinaPrinter author:Yuina !waitInput
+@char Yuina.Hehe pos:23,0 scale:0.5 wait:false
+@print "Uwah! Now that was a proper session. The train is picking up speed... now you're cooking!" printer:YuinaPrinter author:Yuina !waitInput

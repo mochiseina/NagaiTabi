@@ -471,6 +471,8 @@ GameObject:
   - component: {fileID: 8751213210359604540}
   - component: {fileID: 3828652346688391660}
   - component: {fileID: 5960363912050023835}
+  - component: {fileID: 7237061717190056575}
+  - component: {fileID: 5700994488724318135}
   m_Layer: 5
   m_Name: YuinaButton
   m_TagString: Untagged
@@ -629,6 +631,30 @@ MonoBehaviour:
   dismissScript: YuinaDismiss
   generalTalksBeforeStationInfo: 2
   autoDismissSeconds: 7
+--- !u!225 &7237061717190056575
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180738777545280015}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &5700994488724318135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180738777545280015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47f3cb64075459a44b9705aaae4b614e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::YuinaButtonRaycastGate
 --- !u!1 &192762221236850249
 GameObject:
   m_ObjectHideFlags: 0
@@ -729,7 +755,7 @@ MonoBehaviour:
   prevButton: {fileID: 7135701728471985810}
   nextButton: {fileID: 996666714372848094}
   yuinaTipPrefix: '<b>YuinaTip:</b> '
-  yuinaTipColor: '#E8A0BF'
+  yuinaTipColor: '#FA003F'
   pages: []
 --- !u!1 &217769352465285675
 GameObject:
@@ -6641,7 +6667,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00051189057, y: -0.0007324219}
+  m_AnchoredPosition: {x: 0.00082423916, y: -0.0007324219}
   m_SizeDelta: {x: -5.407776, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2142438407414856814

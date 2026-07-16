@@ -1,4 +1,3 @@
 @showPrinter YuinaPrinter
-@set YuinaPose="Hehe"
-@char Yuina.{YuinaPose} pos:23,0 scale:0.5 wait:false
-@print "Muy bien. Una sesión sólida de listening suma muchísimo." printer:YuinaPrinter author:Yuina !waitInput
+@char Yuina.Hehe pos:23,0 scale:0.5 wait:false
+@print "Very good. A solid listening session adds up to far more than it seems. Keep going like that, and the hours will pile up before you notice." printer:YuinaPrinter author:Yuina !waitInput

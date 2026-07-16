@@ -3,19 +3,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-/// <summary>
-/// Guía navegable por páginas (estilo libro) para el panel Guide.
-/// Muestra una página a la vez en un TextMeshProUGUI, con flechas ◀ ▶ para pasar.
-///
-/// SETUP:
-/// 1) Pon este componente en el panel Guide.
-/// 2) Arrastra el TextMeshProUGUI del cuerpo (bodyText) y, si quieres, el del título (titleText)
-///    y el del contador (pageCounterText, ej. "3 / 14").
-/// 3) Arrastra los botones Prev (◀) y Next (▶).
-/// 4) Las páginas se editan abajo, en la lista 'pages' del Inspector, o en BuildPages().
-///
-/// El texto usa rich text de TMP (<b>, <size>, etc.), así que puedes dar formato.
-/// </summary>
 public class GuideBook : MonoBehaviour
 {
 	[System.Serializable]
@@ -37,7 +24,7 @@ public class GuideBook : MonoBehaviour
 	[Tooltip("Prefijo que se antepone al tip (puedes usar rich text).")]
 	[SerializeField] private string yuinaTipPrefix = "<b>YuinaTip:</b> ";
 	[Tooltip("Color del YuinaTip en hex (rich text).")]
-	[SerializeField] private string yuinaTipColor = "#E8A0BF";
+	[SerializeField] private string yuinaTipColor = "#7C0A02";
 
 	[Header("Páginas")]
 	[SerializeField] private List<Page> pages = new();
@@ -99,7 +86,6 @@ public class GuideBook : MonoBehaviour
 		if (nextButton != null) nextButton.interactable = currentIndex < pages.Count - 1;
 	}
 
-	/// <summary>Páginas por defecto (resumidas). Puedes reemplazarlas en el Inspector.</summary>
 	private List<Page> BuildDefaultPages()
 	{
 		return new List<Page>

@@ -2,21 +2,6 @@ using TMPro;
 using UnityEngine;
 using NagaiTabi.Journey;
 
-/// <summary>
-/// Rellena el cartel de estación tipo tren japonés (debajo del mapa):
-///   - NS: número de línea (01..15) de la estación actual.
-///   - Estación actual: nombre japonés + romaji.
-///   - つぎは: siguiente estación, nombre japonés + romaji.
-///   - Horas restantes para la siguiente estación.
-///
-/// Mapeo de tu jerarquía -> campos:
-///   StationNumber      -> stationNumberText
-///   StationName        -> currentStationJpText   (japonés actual, p. ej. 沖縄)
-///   StationRomaji      -> currentStationRomajiText (Okinawa)
-///   NextStationName    -> nextStationJpText       (japonés siguiente, p. ej. 熊本)
-///   NextStationRomaji  -> nextStationRomajiText   (Kumamoto)
-///   HoursLeftText      -> hoursLeftText
-/// </summary>
 public class StationSignView : MonoBehaviour
 {
 	[SerializeField] private TrackerManager trackerManager;
@@ -34,6 +19,20 @@ public class StationSignView : MonoBehaviour
 
 	[Header("Horas restantes")]
 	[SerializeField] private TMP_Text hoursLeftText;
+
+	private void OnEnable()
+	{
+		if (trackerManager != null)
+			trackerManager.OnDataChanged += Refresh;
+
+		Refresh();
+	}
+
+	private void OnDisable()
+	{
+		if (trackerManager != null)
+			trackerManager.OnDataChanged -= Refresh;
+	}
 
 	public void Refresh()
 	{

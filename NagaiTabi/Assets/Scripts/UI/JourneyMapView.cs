@@ -3,21 +3,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using NagaiTabi.Journey;
 
-/// <summary>
-/// Controla los orbes de las estaciones del mapa.
-/// Cada orbe muestra uno de tres estados según tus horas totales:
-///   - PASADA   (ya superaste esa estación)  -> sprite azul encendido
-///   - ACTUAL   (estás en ella ahora)        -> sprite rojo encendido
-///   - PENDIENTE (aún no llegaste)           -> sprite marrón/rojo apagado
-///
-/// SETUP:
-/// 1) Coloca tus 15 orbes (Image) sobre el mapa, en el orden de las estaciones
-///    (Okinawa primero ... Wakkanai último).
-/// 2) Pon este componente en el panel del mapa.
-/// 3) Arrastra los 15 orbes a la lista 'Orbs' EN ORDEN (índice 0 = Okinawa).
-/// 4) Asigna los tres sprites de estado y el TrackerManager.
-/// 5) Llama a Refresh() al entrar al tracker y al loguear (igual que el HUD).
-/// </summary>
 public class JourneyMapView : MonoBehaviour
 {
     [SerializeField] private TrackerManager trackerManager;
@@ -33,7 +18,21 @@ public class JourneyMapView : MonoBehaviour
     [Tooltip("Estación aún no alcanzada (marrón/rojo apagado).")]
     [SerializeField] private Sprite pendingSprite;
 
-    public void Refresh()
+	private void OnEnable()
+	{
+		if (trackerManager != null)
+			trackerManager.OnDataChanged += Refresh;
+
+		Refresh();
+	}
+
+	private void OnDisable()
+	{
+		if (trackerManager != null)
+			trackerManager.OnDataChanged -= Refresh;
+	}
+
+	public void Refresh()
     {
         if (trackerManager == null)
         {
