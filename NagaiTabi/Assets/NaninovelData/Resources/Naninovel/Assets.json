@@ -415,6 +415,30 @@
             "group": ""
         },
         {
+            "guid": "212369cb66f47aa4ba38948f666b3c19",
+            "prefix": "Scripts",
+            "path": "YuinaAfterNight",
+            "group": ""
+        },
+        {
+            "guid": "24da6c52be00d264a8849c80ffcffd7b",
+            "prefix": "Scripts",
+            "path": "YuinaDismiss",
+            "group": ""
+        },
+        {
+            "guid": "212369cb66f47aa4ba38948f666b3c19",
+            "prefix": "Scripts",
+            "path": "YuinaLateNight",
+            "group": ""
+        },
+        {
+            "guid": "a97ab5bac72656b4784287f9b02c1e23",
+            "prefix": "Scripts",
+            "path": "YuinaStationTalk",
+            "group": ""
+        },
+        {
             "guid": "88725342277f50e4587895acc7b7ee7c",
             "prefix": "Scripts",
             "path": "YuinaTalk",

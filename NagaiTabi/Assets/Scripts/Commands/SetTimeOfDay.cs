@@ -16,11 +16,16 @@ namespace NagaiTabi.Commands
 		{
 			if (TimeOfDayRegistry.Instance == null)
 			{
-				Debug.LogWarning("TimeOfDayRegistry.Instance no encontrado.");
+				Debug.LogWarning(
+					"[SetTimeOfDay] TimeOfDayRegistry.Instance no encontrado."
+				);
+
 				return Async.Completed;
 			}
 
-			var value = Assigned(Period) ? Period.Value?.ToLowerInvariant() : "day";
+			var value = Assigned(Period)
+				? Period.Value?.ToLowerInvariant()
+				: "day";
 
 			var period = value switch
 			{
@@ -31,6 +36,7 @@ namespace NagaiTabi.Commands
 			};
 
 			_ = TimeOfDayRegistry.Instance.ForcePeriodAsync(period);
+
 			return Async.Completed;
 		}
 	}

@@ -8,12 +8,10 @@ public class StationAnnouncer : MonoBehaviour
 	[SerializeField] private TrackerManager trackerManager;
 	[SerializeField] private YuinaDirector yuinaDirector;
 
-	[Header("Scripts Naninovel (arrastra los .nani aquí)")]
-	[ScriptAssetRef] public string arrivalsScriptRef;
-	[ScriptAssetRef] public string approachingScriptRef;
+	[Header("Nombres de los scripts .nani (sin extensión, tal como se llaman)")]
+	[SerializeField] private string arrivalsScript = "Arrivals";
+	[SerializeField] private string approachingScript = "Approaching";
 
-	[Header("Umbral de aviso 'mamonaku'")]
-	[Tooltip("Fracción del tramo restante (0..1) bajo la cual suena el 'mamonaku'. 0.10 = 10%.")]
 	[Range(0.01f, 0.5f)]
 	[SerializeField] private float approachRatio = 0.10f;
 
@@ -22,93 +20,79 @@ public class StationAnnouncer : MonoBehaviour
 
 	private void OnEnable()
 	{
-		if (trackerManager != null)
-			trackerManager.OnEntryLogged += HandleEntryLogged;
+		if (trackerManager != null) trackerManager.OnEntryLogged += HandleEntryLogged;
 	}
 
 	private void OnDisable()
 	{
-		if (trackerManager != null)
-			trackerManager.OnEntryLogged -= HandleEntryLogged;
+		if (trackerManager != null) trackerManager.OnEntryLogged -= HandleEntryLogged;
 	}
 
 	private void HandleEntryLogged(ImmersionEntry entry)
 	{
 		if (trackerManager == null) return;
 		float totalHours = trackerManager.GetTotalMinutes() / 60f;
-
 		bool announced = TryAnnounce(totalHours);
-
-		if (!announced && yuinaDirector != null)
-			yuinaDirector.PlayReactionFor(entry);
+		if (!announced && yuinaDirector != null) yuinaDirector.PlayReactionFor(entry);
 	}
 
-	/// <summary>Reproduce un anuncio si corresponde. Devuelve true si reprodujo algo.</summary>
 	public bool TryAnnounce(float totalHours)
 	{
 		int currentIndex = JourneyMap.GetCurrentStationIndex(totalHours);
 
-		// 1. ¿Llegada a estación nueva? (Okinawa=0 excluido)
 		int lastArrived = PlayerPrefs.GetInt(KEY_LAST_ARRIVED, 0);
 		if (currentIndex > lastArrived && currentIndex >= 1)
 		{
-			PlayAnnouncement(arrivalsScriptRef, currentIndex);
+			PlayAnnouncement(arrivalsScript, currentIndex);
 			PlayerPrefs.SetInt(KEY_LAST_ARRIVED, currentIndex);
 			PlayerPrefs.Save();
 			return true;
 		}
 
-		// 2. ¿A <=10% del tramo hacia la siguiente?
 		var next = JourneyMap.GetNextStation(totalHours);
 		if (next == null) return false;
 
 		int nextIndex = currentIndex + 1;
 		float hoursToNext = JourneyMap.GetHoursToNextStation(totalHours);
-
 		float from = JourneyMap.Stations[currentIndex].hoursToReach;
-		float to = next.hoursToReach;
-		float segment = Mathf.Max(0.0001f, to - from);
-
+		float segment = Mathf.Max(0.0001f, next.hoursToReach - from);
 		bool withinApproach = (hoursToNext / segment) <= approachRatio;
 
 		int lastApproach = PlayerPrefs.GetInt(KEY_LAST_APPROACH, -1);
 		if (withinApproach && lastApproach != nextIndex)
 		{
-			PlayAnnouncement(approachingScriptRef, nextIndex);
+			PlayAnnouncement(approachingScript, nextIndex);
 			PlayerPrefs.SetInt(KEY_LAST_APPROACH, nextIndex);
 			PlayerPrefs.Save();
 			return true;
 		}
-
 		return false;
 	}
-
-	/// <summary>
-	/// Salta a StationXX usando el mismo patrón que YuinaTalkTrigger:
-	/// ScriptAssets.GetPath sobre la referencia + LoadAndPlayAtLabel.
-	/// </summary>
-	private void PlayAnnouncement(string scriptRef, int stationIndex)
+	private void PlayAnnouncement(string scriptName, int stationIndex)
 	{
 		if (!Engine.Initialized)
 		{
-			Debug.LogWarning("[StationAnnouncer] Naninovel no inicializado todavía.");
-			return;
-		}
-		if (string.IsNullOrWhiteSpace(scriptRef))
-		{
-			Debug.LogWarning("[StationAnnouncer] Falta asignar el script .nani en el Inspector.");
+			Debug.LogWarning("[StationAnnouncer] Naninovel no inicializado.");
 			return;
 		}
 
-		string label = $"Station{stationIndex:00}";
+		var vars = Engine.GetService<ICustomVariableManager>();
+		vars.SetVariableValue(
+			"G_Station",
+			new CustomVariableValue(stationIndex.ToString())
+		);
+
+		var audio = Engine.GetService<IAudioManager>();
+		audio.StopVoice();
+
 		var player = Engine.GetService<IScriptPlayer>();
-		var path = ScriptAssets.GetPath(scriptRef);
 
-		Debug.Log($"[StationAnnouncer] Reproduciendo {path}#{label}");
-		player.MainTrack.LoadAndPlayAtLabel(path, label).Forget();
+		// El anuncio de llegada o aproximación tiene prioridad sobre cualquier comentario manual de Yuina que siga reproduciéndose
+		player.MainTrack.Stop();
+
+		Debug.Log($"[StationAnnouncer] {scriptName} -> estación {stationIndex}");
+		player.MainTrack.LoadAndPlay(scriptName).Forget();
 	}
-
-	/// <summary>Resetea el estado de anuncios (engánchalo a tu botón de reset).</summary>
 	public void ResetAnnouncementState()
 	{
 		PlayerPrefs.DeleteKey(KEY_LAST_ARRIVED);

@@ -1,27 +1,66 @@
 using System;
 using Naninovel;
+using Naninovel.Commands;
 using UnityEngine;
 using NagaiTabi.Runtime.TimeOfDay;
 
 namespace NagaiTabi.Commands
 {
-    /// <summary>
-    /// Comando @activatetimeofday : enciende el TimeOfDayWatcher de la escena.
-    /// Se llama al entrar al tracker (en MainTracker.nani) para que el ciclo
-    /// día/noche NO actúe en el título.
-    /// </summary>
-    [Serializable, Alias("activatetimeofday")]
-    public class ActivateTimeOfDay : Command
-    {
-        public override Awaitable Execute(ExecutionContext ctx)
-        {
-            var watcher = UnityEngine.Object.FindFirstObjectByType<TimeOfDayWatcher>();
-            if (watcher != null)
-                watcher.Activate();
-            else
-                Debug.LogWarning("[ActivateTimeOfDay] No se encontró TimeOfDayWatcher en la escena.");
+	[Serializable, Alias("activateTimeOfDay")]
+	public sealed class ActivateTimeOfDay : Command
+	{
+		public override Awaitable Execute(ExecutionContext ctx)
+		{
+			var watcher =
+				UnityEngine.Object.FindFirstObjectByType<TimeOfDayWatcher>(
+					FindObjectsInactive.Include
+				);
 
-            return Async.Completed;
-        }
-    }
+			if (watcher == null)
+			{
+				Debug.LogWarning(
+					"[ActivateTimeOfDay] No se encontró TimeOfDayWatcher."
+				);
+
+				return Async.Completed;
+			}
+
+			watcher.Activate();
+
+			Debug.Log(
+				"[ActivateTimeOfDay] Sistema horario activado."
+			);
+
+			return Async.Completed;
+		}
+	}
+
+	[Serializable, Alias("deactivateTimeOfDay")]
+	public sealed class DeactivateTimeOfDay : Command
+	{
+		public override Awaitable Execute(ExecutionContext ctx)
+		{
+			var watcher =
+				UnityEngine.Object.FindFirstObjectByType<TimeOfDayWatcher>(
+					FindObjectsInactive.Include
+				);
+
+			if (watcher == null)
+			{
+				Debug.LogWarning(
+					"[DeactivateTimeOfDay] No se encontró TimeOfDayWatcher."
+				);
+
+				return Async.Completed;
+			}
+
+			watcher.Deactivate();
+
+			Debug.Log(
+				"[DeactivateTimeOfDay] Sistema horario desactivado."
+			);
+
+			return Async.Completed;
+		}
+	}
 }

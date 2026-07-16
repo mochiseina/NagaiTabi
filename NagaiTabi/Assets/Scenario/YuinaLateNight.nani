@@ -1,0 +1,20 @@
+@stopVoice
+@processInput set:Continue.true
+
+@showPrinter YuinaPrinter time:0 wait!
+@printer YuinaPrinter tint:#FF000099
+@resetText YuinaPrinter
+
+@char Yuina.Angry pos:23,0 scale:0.5 wait:false
+
+@print "It's past eight already. Listen carefully: no enormous immersion marathons at this hour." printer:YuinaPrinter author:Yuina waitInput! wait!
+
+@char Yuina.Decided pos:23,0 scale:0.5 wait:false
+
+@print "Sleep is when your brain starts sorting out everything you gave it today. A short, gentle session is fine, but forcing yourself through a tired one would only derail you. Take care of yourself for me, all right?" printer:YuinaPrinter author:Yuina waitInput! wait!
+
+@hidePrinter YuinaPrinter time:0.15 wait!
+@resetText YuinaPrinter
+
+@char Yuina.Neutral pos:23,0 scale:0.5 wait:false
+@stop

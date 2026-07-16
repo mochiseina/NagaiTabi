@@ -1,74 +1,104 @@
-; Approaching.nani — MAMONAKU: solo audio de megafonía, sin texto ni cuadro.
+; C# fija G_Station y reproduce este script desde el inicio.
+@stopVoice
+@stopSfx
+
+; --- Dispatcher de estación ---
+@goto #Station01 if:G_Station=="1"
+@goto #Station02 if:G_Station=="2"
+@goto #Station03 if:G_Station=="3"
+@goto #Station04 if:G_Station=="4"
+@goto #Station05 if:G_Station=="5"
+@goto #Station06 if:G_Station=="6"
+@goto #Station07 if:G_Station=="7"
+@goto #Station08 if:G_Station=="8"
+@goto #Station09 if:G_Station=="9"
+@goto #Station10 if:G_Station=="10"
+@goto #Station11 if:G_Station=="11"
+@goto #Station12 if:G_Station=="12"
+@goto #Station13 if:G_Station=="13"
+@goto #Station14 if:G_Station=="14"
+@stop
 
 # Station01
 @char Yuina.Announce scale:0.5
+@stopSfx
 @sfx mamo_kumamoto wait:false volume:0.5
 @stop
 
 # Station02
 @char Yuina.Announce scale:0.5
+@stopSfx
 @sfx mamo_hakata wait:false volume:0.5
 @stop
 
 # Station03
 @char Yuina.Announce scale:0.5
+@stopSfx
 @sfx mamo_yamaguti wait:false volume:0.5
 @stop
 
 # Station04
 @char Yuina.Announce scale:0.5
+@stopSfx
 @sfx mamo_hirosima wait:false volume:0.5
 @stop
 
 # Station05
 @char Yuina.Announce scale:0.5
+@stopSfx
 @sfx mamo_takamatu wait:false volume:0.5
 @stop
 
 # Station06
 @char Yuina.Announce scale:0.5
+@stopSfx
 @sfx mamo_oosaka wait:false volume:0.5
 @stop
 
 # Station07
 @char Yuina.Announce scale:0.5
+@stopSfx
 @sfx mamo_tokyo wait:false volume:0.5
 @stop
 
 # Station08
 @char Yuina.Announce scale:0.5
+@stopSfx
 @sfx mamo_ooarai wait:false volume:0.5
 @stop
 
 # Station09
 @char Yuina.Announce scale:0.5
+@stopSfx
 @sfx mamo_fukusima wait:false volume:0.5
 @stop
 
 # Station10
 @char Yuina.Announce scale:0.5
+@stopSfx
 @sfx mamo_sendai wait:false volume:0.5
 @stop
 
 # Station11
 @char Yuina.Announce scale:0.5
+@stopSfx
 @sfx mamo_tugaru wait:false volume:0.5
 @stop
 
 # Station12
 @char Yuina.Announce scale:0.5
+@stopSfx
 @sfx mamo_hakodate wait:false volume:0.5
 @stop
 
 # Station13
 @char Yuina.Announce scale:0.5
+@stopSfx
 @sfx mamo_sapporo wait:false volume:0.5
 @stop
 
 # Station14
 @char Yuina.Announce scale:0.5
+@stopSfx
 @sfx mamo_wakkanai wait:false volume:0.5
-@stop
-
-# End
 @stop

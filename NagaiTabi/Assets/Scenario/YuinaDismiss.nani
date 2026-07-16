@@ -1,0 +1,3 @@
+@hidePrinter YuinaPrinter time:0.15 wait!
+@resetText YuinaPrinter
+@stop

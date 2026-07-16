@@ -1,0 +1,236 @@
+@stopVoice
+@showPrinter YuinaPrinter
+@printer YuinaPrinter default! !hideOther
+@resetText YuinaPrinter
+
+@goto #Okinawa if:G_Station=="1"
+@goto #Kumamoto if:G_Station=="2"
+@goto #Fukuoka if:G_Station=="3"
+@goto #Yamaguchi if:G_Station=="4"
+@goto #Hiroshima if:G_Station=="5"
+@goto #Takamatsu if:G_Station=="6"
+@goto #Osaka if:G_Station=="7"
+@goto #Tokyo if:G_Station=="8"
+@goto #Oarai if:G_Station=="9"
+@goto #Fukushima if:G_Station=="10"
+@goto #Sendai if:G_Station=="11"
+@goto #Tsugaru if:G_Station=="12"
+@goto #Hakodate if:G_Station=="13"
+@goto #Sapporo if:G_Station=="14"
+@goto #Wakkanai if:G_Station=="15"
+@goto #Unknown
+
+# Okinawa
+@goto #OkinawaA if:G_StationTalkVariant=="0"
+@goto #OkinawaB
+
+# OkinawaA
+@char Yuina.Happy pos:23,0 scale:0.5 wait:false
+@print "Station {G_StationNumber} of {G_TotalStations}: Okinawa, or 沖縄. Look at that blue water... It hardly feels like the same Japan we'll see farther north. The islands have their own Ryukyuan cultures and languages, not merely a different accent of standard Japanese." printer:YuinaPrinter author:Yuina !waitInput
+@stop
+
+# OkinawaB
+@char Yuina.Hehe pos:23,0 scale:0.5 wait:false
+@print "Before we leave Okinawa, we should try goya chanpuru, Okinawa soba and perhaps some sata andagi. Starting a two-thousand-hour journey on an empty stomach would be terribly irresponsible of me." printer:YuinaPrinter author:Yuina !waitInput
+@stop
+
+# Kumamoto
+@goto #KumamotoA if:G_StationTalkVariant=="0"
+@goto #KumamotoB
+
+# KumamotoA
+@char Yuina.Happy pos:23,0 scale:0.5 wait:false
+@print "Station {G_StationNumber} of {G_TotalStations}: Kumamoto, or 熊本. Beyond the city lies Mount Aso, with enormous grasslands spread around its volcanic caldera. On a clear day, the scenery feels far too wide to belong to one prefecture." printer:YuinaPrinter author:Yuina !waitInput
+@stop
+
+# KumamotoB
+@char Yuina.Hehe pos:23,0 scale:0.5 wait:false
+@print "Kumamoto is also known for karashi renkon, lotus root filled with spicy mustard miso. I would offer you some, but watching your face after the first bite may be more entertaining." printer:YuinaPrinter author:Yuina !waitInput
+@stop
+
+# Fukuoka
+@goto #FukuokaA if:G_StationTalkVariant=="0"
+@goto #FukuokaB
+
+# FukuokaA
+@char Yuina.Announce pos:23,0 scale:0.5 wait:false
+@print "Station {G_StationNumber} of {G_TotalStations}: Fukuoka, or 福岡. Around Hakata and Tenjin, the city stays lively well into the evening. The riverside yatai food stalls are perfect for ramen, yakitori and conversations with complete strangers." printer:YuinaPrinter author:Yuina !waitInput
+@stop
+
+# FukuokaB
+@char Yuina.Hehe pos:23,0 scale:0.5 wait:false
+@print "Hakata ramen is served quickly, so you can order another portion of noodles with kaedama before the broth gets lonely. Don't look at me like that. Efficient eating is still efficiency." printer:YuinaPrinter author:Yuina !waitInput
+@stop
+
+# Yamaguchi
+@goto #YamaguchiA if:G_StationTalkVariant=="0"
+@goto #YamaguchiB
+
+# YamaguchiA
+@char Yuina.Happy pos:23,0 scale:0.5 wait:false
+@print "Station {G_StationNumber} of {G_TotalStations}: Yamaguchi, or 山口. Akiyoshidai opens into rolling limestone grasslands, while Akiyoshido stretches underneath them in cool, echoing caverns. It feels like travelling through two different worlds at once." printer:YuinaPrinter author:Yuina !waitInput
+@stop
+
+# YamaguchiB
+@char Yuina.Serious pos:23,0 scale:0.5 wait:false
+@print "Near Shimonoseki, fugu appears everywhere from restaurant signs to local mascots. Properly prepared, it is perfectly respectable. Improperly prepared... well, let's choose the restaurant carefully. I still need you." printer:YuinaPrinter author:Yuina !waitInput
+@stop
+
+# Hiroshima
+@goto #HiroshimaA if:G_StationTalkVariant=="0"
+@goto #HiroshimaB
+
+# HiroshimaA
+@char Yuina.Happy pos:23,0 scale:0.5 wait:false
+@print "Station {G_StationNumber} of {G_TotalStations}: Hiroshima, or 広島. Miyajima sits just across the water, with wooded slopes, wandering deer and the great torii appearing to float when the tide comes in." printer:YuinaPrinter author:Yuina !waitInput
+@stop
+
+# HiroshimaB
+@char Yuina.Hehe pos:23,0 scale:0.5 wait:false
+@print "Hiroshima-style okonomiyaki is built in layers, usually with noodles beneath the cabbage, egg and sauce. We should share one. Mostly because ordering two enormous ones would test the train's suspension." printer:YuinaPrinter author:Yuina !waitInput
+@stop
+
+# Takamatsu
+@goto #TakamatsuA if:G_StationTalkVariant=="0"
+@goto #TakamatsuB
+
+# TakamatsuA
+@char Yuina.Happy pos:23,0 scale:0.5 wait:false
+@print "Station {G_StationNumber} of {G_TotalStations}: Takamatsu, or 高松. From the port, ferries cross the calm Seto Inland Sea toward islands such as Naoshima. Sea, art and small island towns... I could happily disappear here for several days." printer:YuinaPrinter author:Yuina !waitInput
+@stop
+
+# TakamatsuB
+@char Yuina.Announce pos:23,0 scale:0.5 wait:false
+@print "Kagawa takes Sanuki udon extremely seriously. Some shops let you choose the noodles, broth and toppings almost like assembling machinery. You handle the tempura; I'll supervise quality control." printer:YuinaPrinter author:Yuina !waitInput
+@stop
+
+# Osaka
+@goto #OsakaA if:G_StationTalkVariant=="0"
+@goto #OsakaB
+
+# OsakaA
+@char Yuina.Hehe pos:23,0 scale:0.5 wait:false
+@print "Station {G_StationNumber} of {G_TotalStations}: Osaka, or 大阪. Dotonbori is all neon signs, loud voices and smells designed to destroy your self-control. Takoyaki, kushikatsu, okonomiyaki... resistance is mostly ceremonial." printer:YuinaPrinter author:Yuina !waitInput
+@stop
+
+# OsakaB
+@char Yuina.Happy pos:23,0 scale:0.5 wait:false
+@print "People here often sound more direct and playful than in Tokyo, and Kansai speech has a rhythm of its own. Stay close to me, {PlayerName}. If someone starts teasing us, I intend to win." printer:YuinaPrinter author:Yuina !waitInput
+@stop
+
+# Tokyo
+@goto #TokyoA if:G_StationTalkVariant=="0"
+@goto #TokyoB
+
+# TokyoA
+@char Yuina.Happy pos:23,0 scale:0.5 wait:false
+@print "Station {G_StationNumber} of {G_TotalStations}: Tokyo, or 東京. Tokyo Tower or Tokyo Skytree—which would you choose? I prefer Tokyo Tower at night. It feels warmer somehow, even when the whole city around it is enormous." printer:YuinaPrinter author:Yuina !waitInput
+@stop
+
+# TokyoB
+@char Yuina.Hehe pos:23,0 scale:0.5 wait:false
+@print "I would love to walk through Inokashira Park with you, then head to Shibuya and accidentally miss the last train. Don't worry—it wouldn't be ours. A conductor always keeps one train waiting for someone special." printer:YuinaPrinter author:Yuina !waitInput
+@stop
+
+# Oarai
+@goto #OaraiA if:G_StationTalkVariant=="0"
+@goto #OaraiB
+
+# OaraiA
+@char Yuina.Happy pos:23,0 scale:0.5 wait:false
+@print "Station {G_StationNumber} of {G_TotalStations}: Oarai, or 大洗. The Pacific opens directly in front of the town, and the Kamiiso torii stands among the waves. At sunrise, the water around it looks almost unreal." printer:YuinaPrinter author:Yuina !waitInput
+@stop
+
+# OaraiB
+@char Yuina.Hehe pos:23,0 scale:0.5 wait:false
+@print "Oarai is known for seafood, especially winter anglerfish hot pot, and anime fans have given the town another life through Girls und Panzer. I suppose fiction can move towns as effectively as immersion moves our train." printer:YuinaPrinter author:Yuina !waitInput
+@stop
+
+# Fukushima
+@goto #FukushimaA if:G_StationTalkVariant=="0"
+@goto #FukushimaB
+
+# FukushimaA
+@char Yuina.Happy pos:23,0 scale:0.5 wait:false
+@print "Station {G_StationNumber} of {G_TotalStations}: Fukushima, or 福島. The prefecture stretches from mountain lakes and onsen towns to enormous orchards. In summer, the peaches here are almost unfairly good." printer:YuinaPrinter author:Yuina !waitInput
+@stop
+
+# FukushimaB
+@char Yuina.Decided pos:23,0 scale:0.5 wait:false
+@print "There are quiet samurai streets in Aizu, bright waters around the Bandai lakes and bowls of Kitakata ramen with thick, curled noodles. Places are always larger than the single story people attach to them. People are too." printer:YuinaPrinter author:Yuina !waitInput
+@stop
+
+# Sendai
+@goto #SendaiA if:G_StationTalkVariant=="0"
+@goto #SendaiB
+
+# SendaiA
+@char Yuina.Happy pos:23,0 scale:0.5 wait:false
+@print "Station {G_StationNumber} of {G_TotalStations}: Sendai, or 仙台. Its broad avenues are lined with zelkova trees, giving the city a softer atmosphere than its size suggests. During Tanabata, those streets fill with enormous colourful streamers." printer:YuinaPrinter author:Yuina !waitInput
+@stop
+
+# SendaiB
+@char Yuina.Hehe pos:23,0 scale:0.5 wait:false
+@print "We should try gyutan and something made with zunda, the sweet edamame paste Sendai puts into more desserts than seems scientifically necessary. I enjoy travelling with you. Have I told you that properly yet?" printer:YuinaPrinter author:Yuina !waitInput
+@stop
+
+# Tsugaru
+@goto #TsugaruA if:G_StationTalkVariant=="0"
+@goto #TsugaruB
+
+# TsugaruA
+@char Yuina.Announce pos:23,0 scale:0.5 wait:false
+@print "Station {G_StationNumber} of {G_TotalStations}: Tsugaru, or 津軽. The local railway crosses open fields on a small single-track line. It uses stove trains in winter, wind-chime trains in summer and bell-cricket trains in autumn." printer:YuinaPrinter author:Yuina !waitInput
+@stop
+
+# TsugaruB
+@char Yuina.Happy pos:23,0 scale:0.5 wait:false
+@print "This region is full of apple orchards, deep snow and the sharp sound of Tsugaru shamisen. Sitting beside you on a stove train while the fields turn white outside... that would be rather lovely." printer:YuinaPrinter author:Yuina !waitInput
+@stop
+
+# Hakodate
+@goto #HakodateA if:G_StationTalkVariant=="0"
+@goto #HakodateB
+
+# HakodateA
+@char Yuina.Happy pos:23,0 scale:0.5 wait:false
+@print "Station {G_StationNumber} of {G_TotalStations}: Hakodate, or 函館. The morning market is packed with squid, crab, sea urchin and bowls of seafood over rice. This far north, even breakfast feels like an event." printer:YuinaPrinter author:Yuina !waitInput
+@stop
+
+# HakodateB
+@char Yuina.Hehe pos:23,0 scale:0.5 wait:false
+@print "From Mount Hakodate, the city glitters between two dark stretches of sea. I want to see that view beside you after sunset. We have travelled too far together to pretend this is only a professional relationship now." printer:YuinaPrinter author:Yuina !waitInput
+@stop
+
+# Sapporo
+@goto #SapporoA if:G_StationTalkVariant=="0"
+@goto #SapporoB
+
+# SapporoA
+@char Yuina.Happy pos:23,0 scale:0.5 wait:false
+@print "Station {G_StationNumber} of {G_TotalStations}: Sapporo, or 札幌. Wide streets, underground walkways and long snowy winters give the city a rhythm unlike anywhere farther south. Odori Park cuts a green—or very white—line through its centre." printer:YuinaPrinter author:Yuina !waitInput
+@stop
+
+# SapporoB
+@char Yuina.Hehe pos:23,0 scale:0.5 wait:false
+@print "Miso ramen, soup curry, grilled lamb and more dairy desserts than we could responsibly test in one evening... We're almost at the end, {PlayerName}. Perhaps I am trying to make this stop last a little longer." printer:YuinaPrinter author:Yuina !waitInput
+@stop
+
+# Wakkanai
+@goto #WakkanaiA if:G_StationTalkVariant=="0"
+@goto #WakkanaiB
+
+# WakkanaiA
+@char Yuina.Decided pos:23,0 scale:0.5 wait:false
+@print "Station {G_StationNumber} of {G_TotalStations}: Wakkanai, or 稚内. We have reached Japan's northernmost city. At Cape Soya, the wind crosses open grasslands and the sea stretches toward Sakhalin on the horizon." printer:YuinaPrinter author:Yuina !waitInput
+@stop
+
+# WakkanaiB
+@char Yuina.Happy pos:23,0 scale:0.5 wait:false
+@print "This is the end of the line... but I don't want it to be the end of us. I love you so much, {PlayerName}. Did you know that? Thank you for giving this train a reason to move—and for letting me travel every one of those hours beside you." printer:YuinaPrinter author:Yuina !waitInput
+@stop
+
+# Unknown
+@char Yuina.What pos:23,0 scale:0.5 wait:false
+@print "Hm? The instruments haven't identified our current station correctly. Please refrain from moving the train while I inspect the route. Preferably without touching anything expensive." printer:YuinaPrinter author:Yuina !waitInput
+@stop
